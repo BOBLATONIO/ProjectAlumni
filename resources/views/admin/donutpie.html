@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Traffic Chart</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        $(document).ready(function () {
+            function updateCharts() {
+                $('.pie-chart-data').each(function (index) {
+                    let trafficData = {};
+                    let labels = [];
+                    let totalLabel = $(this).siblings('.total-label').text() || 'Total';
+
+                    $(this).find('div').each(function () {
+                        let label = $(this).attr('data-label');
+                        let value = parseFloat($(this).text());
+                        if (!isNaN(value)) {
+                            if (trafficData[label]) {
+                                trafficData[label] += value;
+                            } else {
+                                trafficData[label] = value;
+                                labels.push(label);
+                            }
+                        }
+                    });
+
+                    const colors = [
+                        '#1C64F2', '#16BDCA', '#FDBA8C', '#E74694', '#34D399', '#FACC15', '#A855F7', '#EF4444', '#10B981', '#6366F1',
+                        '#D946EF', '#22D3EE', '#F59E0B', '#6B7280', '#EC4899', '#F97316', '#84CC16', '#3B82F6', '#9333EA', '#EAB308',
+                        '#14B8A6', '#8B5CF6', '#F43F5E', '#A3E635', '#38BDF8', '#FB7185', '#B91C1C', '#1E40AF', '#047857', '#78350F'
+                    ];
+
+                    const chartOptions = {
+                        series: Object.values(trafficData),
+                        chart: {
+                            type: 'donut',
+                        },
+                        labels: labels,
+                        colors: colors,
+                        legend: { position: 'bottom' },
+                        plotOptions: {
+                            pie: {
+                                donut: {
+                                    labels: {
+                                        show: true,
+                                        name: {
+                                            show: true
+                                        },
+                                        value: {
+                                            show: true
+                                        },
+                                        total: {
+                                            show: true,
+                                            showAlways: true,
+                                            label: totalLabel,
+                                            fontSize: '30px',
+                                            fontWeight: 700,
+                                            color: '#00000',
+                                            formatter: function (w) {
+                                                let sum = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
+                                                return `${sum.toLocaleString()}`;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        tooltip: {
+                            enabled: true,
+                            y: {
+                                formatter: function (val) {
+                                    return `${val.toLocaleString()}`;
+                                }
+                            }
+                        }
+                    };
+
+                    let chartContainer = $('<div class="py-6 chart-container"></div>').attr('id', 'donut-chart-' + index);
+                    $(this).before(chartContainer);
+
+                    const chart = new ApexCharts(chartContainer[0], chartOptions);
+                    chart.render();
+                });
+            }
+
+            updateCharts();
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 p-10">
+    <div class="w-[400px] bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 md:p-6">
+        <div class="flex justify-between mb-3">
+            <h5 class="text-xl font-bold text-gray-900 dark:text-white">Website Traffic</h5>
+        </div>
+        <div class="total-label hidden">Total</div>
+        <div class="hidden pie-chart-data">
+            <div data-label="Tablet1">23</div>
+            <div data-label="Mobile1">42</div>
+            <div data-label="Desktop2">35</div>
+            <div data-label="Tablet2">23</div>
+            <div data-label="Mobile2">42</div>
+            <div data-label="Desktop3">35</div>
+            <div data-label="Tablet3">23</div>
+            <div data-label="Mobile3s">242</div>
+            <div data-label="Desktop">35</div>
+            <div data-label="Tablet">23</div>
+            <div data-label="Mobile">42</div>
+            <div data-label="Desktop1">35</div>
+            <div data-label="Tablet1">23</div>
+            <div data-label="Mobile1">42</div>
+            <div data-label="Desktop2">35</div>
+            <div data-label="Tablet2">23</div>
+            <div data-label="Mobile2">42</div>
+            <div data-label="Desktop3">35</div>
+            <div data-label="Tablet3">23</div>
+            <div data-label="Mobile3s">242</div>
+
+        </div>
+    </div>
+    <div class="w-full bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 md:p-6">
+        <div class="flex justify-between mb-3">
+            <h5 class="text-xl font-bold text-gray-900 dark:text-white">Website Traffic</h5>
+        </div>
+        <div class="total-label hidden">Total</div>
+        <div class="hidden pie-chart-data">
+            <div data-label="Desktop">35</div>
+            <div data-label="Tablet">23</div>
+            <div data-label="Mobile">42</div>
+            <div data-label="Desktop1">35</div>
+            <div data-label="Tablet1">23</div>
+            <div data-label="Mobile1">42</div>
+            <div data-label="Desktop2">35</div>
+            <div data-label="Tablet2">23</div>
+            <div data-label="Mobile2">42</div>
+            <div data-label="Desktop3">35</div>
+            <div data-label="Tablet3">23</div>
+            <div data-label="Mobile3s">242</div>
+
+        </div>
+    </div>
+    <div class="w-full bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 md:p-6 mt-6">
+        <div class="flex justify-between mb-3">
+            <h5 class="text-xl font-bold text-gray-900 dark:text-white">Website Traffic</h5>
+        </div>
+        <div class="total-label hidden">Lahat</div>
+        <div class="hidden pie-chart-data">
+            <div data-label="Sample">3</div>
+            <div data-label="Data">1</div>
+            <div data-label="Langto">2</div>
+        </div>
+    </div>
+</body>
+
+</html>

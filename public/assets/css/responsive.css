@@ -1,0 +1,11 @@
+@media (max-width: 900px) {
+    .max-900\:hidden {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1110px) {
+    .custom-1110\:block {
+        display: block !important;
+    }
+}

@@ -1,0 +1,29 @@
+/* Scrollbar Width */
+.scrollbar::-webkit-scrollbar, .scrollbarMain::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Thumb color */
+.scrollbar::-webkit-scrollbar-thumb, .scrollbarMain::-webkit-scrollbar-thumb {
+    background: #b5b5b5;
+    border-radius: 10px;
+}
+
+/* Thumb hover color */
+.scrollbar::-webkit-scrollbar-thumb:hover, .scrollbarMain::-webkit-scrollbar-thumb:hover{
+    background: #989898;
+}
+
+/* Hide scrollbar on mobile screens */
+@media (max-width: 768px) {
+    .scrollbar, .scrollbarMain {
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For IE/Edge */
+    }
+
+    .scrollbar::-webkit-scrollbar, .scrollbarMain::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Opera */
+    }
+}
+
+
