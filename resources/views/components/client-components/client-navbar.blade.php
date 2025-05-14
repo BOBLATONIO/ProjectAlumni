@@ -267,7 +267,7 @@
                             </li>
                             <li
                                 class="px-4 py-2 flex items-center  cursor-pointer hover:bg-gray-200 dark:hover:dark:hover:bg-[#3B3D3E] transition-all rounded-md">
-                                <a class="block w-full" href="{{ route('donate-us') }}">Help Center</a>
+                                <a class="block w-full" href="{{ route('help-center') }}">Help Center</a>
                             </li>
                             @endif
                             <li

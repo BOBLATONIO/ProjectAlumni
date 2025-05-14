@@ -1,6 +1,12 @@
 <x-layout.client-layout>
+    <section class="text-center px-6 py-12 max-w-screen-xl mx-auto">
 
-    <!-- About This Page Section -->
+    <x-client-components.client-page-header 
+        title="About Us"
+        body="This website is made for our alumni community. It helps former students stay connected, share updates, and celebrate their achievements. We aim to build a strong network for everyone who has been part of our school."
+      />
+      
+    {{-- <!-- About This Page Section -->
     <div class="flex flex-col mx-auto max-w-[1216px] px-5 lg:px-8 p-6 w-full text-justify">
         <h2 class="text-4xl font-semibold text-gray-900 mb-4">About This Page</h2>
         <p class="text-gray-600 leading-relaxed">
@@ -20,19 +26,19 @@
             This page serves as a connection between the institution and its alumni, and as a way to support continuous 
             learning and development.
         </p>
-    </div>
+    </div> --}}
 
     
     <div
-        class="flex flex-col md:flex-row lg:gap-8 mx-auto justify-center max-w-[1216px] md:h-[555px] lg:h-[500px] px-5 lg:px-8 p-6 w-full">
+        class="flex flex-col md:flex-row lg:gap-8 mx-auto justify-center max-w-[1216px] md:h-[555px] lg:h-[500px] px-5 pt-1  lg:px-8 p-6 w-full">
 
         <!-- Mission Card -->
         <div
             class="p-6 flex flex-col w-full md:w-1/2 h-full sm:mx-auto sm:max-w-[560px] text-justify flex-grow">
             <img src="{{ asset('assets/images/mission-illus.png') }}" alt="Mission Image"
                 class="mb-4 w-full h-32 object-cover rounded-lg">
-            <h2 class="text-4xl font-semibold text-gray-900 text-start">Mission</h2>
-            <p class="text-gray-600 mt-2 leading-relaxed">
+            <h2 class="text-4xl font-semibold text-gray-900 text-start dark:text-gray-100">Mission</h2>
+            <p class="text-gray-600 mt-2 leading-relaxed dark:text-gray-400">
                 Our mission is to connect and empower alumni through meaningful relationships, professional
                 development opportunities, and community engagement. We strive to support one another and foster
                 a spirit of collaboration, ensuring our alumni contribute positively to society while enriching
@@ -45,8 +51,8 @@
             class="p-6 flex flex-col w-full md:w-1/2 h-full sm:mx-auto sm:max-w-[560px] text-justify flex-grow">
             <img src="{{ asset('assets/images/vision-illus.png') }}" alt="Vision Image"
                 class="mb-4 w-full h-32 object-cover rounded-lg">
-            <h2 class="text-4xl font-semibold text-gray-900 text-start">Vision</h2>
-            <p class="text-gray-600 mt-2 leading-relaxed">
+            <h2 class="text-4xl font-semibold text-gray-900 text-start dark:text-gray-100">Vision</h2>
+            <p class="text-gray-600 mt-2 leading-relaxed dark:text-gray-400">
                 To establish a dynamic and inclusive alumni network that fosters lifelong connections and
                 collaboration, empowering members to share expertise and resources. We aim to drive community
                 impact through volunteerism and mentorship while creating opportunities for professional
@@ -55,5 +61,6 @@
             </p>
         </div>
     </div>
+</section>
 
 </x-layout.client-layout>

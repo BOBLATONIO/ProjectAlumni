@@ -60,6 +60,16 @@
       </div>
     </div> --}}
 
+    <div class="mt-10 sm:mt-6 text-center ">
+  <p class="text-sm text-gray-600 dark:text-gray-400">
+   Need help with your ID? 
+    <a href="{{ route('help-center') }}" class="text-blue-600 hover:underline">
+      Contact admin here.
+    </a>
+  </p>
+</div>
+
+
 
 
 

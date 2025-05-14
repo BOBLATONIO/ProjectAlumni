@@ -37,9 +37,9 @@
     </div>
 
     <div
-        class="chat-box fixed hidden bottom-0 right-10 h-[500px] w-[350px] border  bg-gray-50 flex flex-col rounded-t-xl shadow-lg ">
+        class="chat-box fixed hidden w-full h-[calc(100%-64px)] bottom-0 right-0 sm:right-10 sm:h-[500px] sm:w-[350px] border  bg-gray-50 flex flex-col sm:rounded-t-xl shadow-lg ">
         <!-- Chat Header -->
-        <div class="border-b text-gray-900 py-2 px-4 text-md font-semibold flex items-center justify-between">
+        <div class="border-b text-gray-900  py-2 px-4 text-md font-bold sm:font-semibold flex items-center justify-between">
             <span>Chat with Us!</span>
             <button class="close-chat p-1 hover:bg-gray-200 rounded">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -65,12 +65,6 @@
                 message="That's awesome. I think our users will really appreciate the improvements." />
             <x-client-components.client-chat-bubble name='You' time='11:03'
                 message="That's awesome. I think our users will really appreciate the improvements." />
-
-
-
-
-
-
         </div>
 
         <!-- Message Input -->

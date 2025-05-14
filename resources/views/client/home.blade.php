@@ -8,7 +8,7 @@
         <div class="z-40">
 
             <h1 class="text-5xl font-bold title-font mb-4 text-gray-50 ">
-                Welcome Homes, Alumni <br>
+                Welcome Home, Alumni <br>
             </h1>
             <p class="lg:w-[450px] mx-auto leading-relaxed text-gray-200 text-base ">
                 Stay connected, share experiences, and collaborate with fellow alumni to inspire and grow together!
