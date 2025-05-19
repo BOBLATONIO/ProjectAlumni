@@ -3,12 +3,11 @@
         <x-client-components.client-page-header title="Your Alumni Help Center"
             body="Browse our FAQs for instant solutions or contact the Alumni Office for more detailed assistance." />
         <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3 px-2">
-            <div class="space-y-2 w-full">
+            
                 <x-client-components.client-faq />
-            </div>
-            <div class="space-y-2 w-full">
                 <x-client-components.client-faq />
-            </div>
+            
+            
         </div>
 
     </div>
@@ -16,7 +15,6 @@
 
 
     <div class="group fixed bottom-10 right-10 flex items-center space-x-3">
-        <!-- Chat bubble -->
         <div
             class="relative max-w-xs bg-gray-800 text-white text-sm px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
             Chat with us!
@@ -25,8 +23,6 @@
                         border-l-8 border-l-gray-800">
             </div>
         </div>
-
-        <!-- Chat button -->
         <button class="chat-toggle bg-gray-800 p-4 rounded-full shadow-lg ">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6 text-white">
@@ -35,10 +31,10 @@
             </svg>
         </button>
     </div>
-
+    {{-- use GET to display chat box (hidden is alternative) --}}
     <div
         class="chat-box fixed hidden w-full h-[calc(100%-64px)] bottom-0 right-0 sm:right-10 sm:h-[500px] sm:w-[350px] border  bg-gray-50 flex flex-col sm:rounded-t-xl shadow-lg ">
-        <!-- Chat Header -->
+        
         <div class="border-b text-gray-900  py-2 px-4 text-md font-bold sm:font-semibold flex items-center justify-between">
             <span>Chat with Us!</span>
             <button class="close-chat p-1 hover:bg-gray-200 rounded">
@@ -49,7 +45,6 @@
             </button>
         </div>
 
-        <!-- Chat Messages -->
         <div class=" flex-1 overflow-y-auto scrollbar p-2 mx-3 mr-1 space-y-1  text-sm">
             <x-client-components.client-chat-bubble name='Admin' time='11:03'
                 message="That's awesome. I think our users will really appreciate the improvements." />
@@ -97,13 +92,12 @@
     @push('scripts')
     <script src="{{ asset('assets/js/client-faq.js') }}"></script>
     <script>
+        //remove this JS
         $(document).ready(function () {
-            // Toggle chat box when the chat button is clicked
             $(".chat-toggle").click(function () {
                 $(".chat-box").toggleClass("hidden");
             });
 
-            // Close the chat when the close button is clicked
             $(".close-chat").click(function () {
                 $(".chat-box").addClass("hidden");
             });

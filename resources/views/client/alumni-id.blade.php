@@ -1,7 +1,7 @@
 <x-layout.client-layout>
   <div class="w-full flex flex-col items-center justify-center max-w-screen-xl px-6 py-12 mx-auto">
 
-    <x-client-components.client-page-header title="Your Official Alumni ID"
+    <x-client-components.client-page-header title="My Alumni ID"
       body="Enjoy the benefits of being part of our alumni community with your official Alumni ID your lifelong connection to the university." />
 
     <div class="sm:w-full mb-72 lg:mb-0 flex justify-center ">
@@ -30,44 +30,81 @@
           src="{{ asset('assets/images/alumni-id-pic.jpeg') }}" alt="">
       </div>
     </div>
-
-
-    {{-- <div class="max-w-4xl mx-auto mt-6 p-8 bg-white dark:bg-gray-800 rounded-2xl border">
-      <div class="flex flex-col md:flex-row items-center justify-between">
-
-        <!-- Alumni Photo -->
-        <div class="flex flex-col items-center mb-8 md:mb-0">
-          <img src="{{ asset('assets/images/Profile.jpeg') }}" alt="Alumni Photo"
-            class="w-36 h-36 rounded-full object-cover border-4 border-[#273461] mb-4">
-          <p class="text-xs text-gray-500 dark:text-gray-400">Alumni</p>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="grid gap-12 row-gap-8 lg:grid-cols-3">
+        {{-- Start --}}
+        <div class="flex">
+          <div class="mr-4">
+            <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-[#fcb92c]">
+              <svg class="w-8 h-8 text-deep-purple-accent-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h6 class="mb-2 font-semibold leading-5">Benifits 1</h6>
+            <p class="text-sm text-gray-900">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+          </div>
         </div>
-
-        <!-- Info Section -->
-        <div class="text-center md:text-left md:flex-1 px-6">
-          <h2 class="text-2xl font-bold text-[#273461] dark:text-[#5a7eff]">BINI TINE CRUZ</h2>
-          <p class="text-lg text-gray-600 dark:text-gray-400 mt-2">Alumni ID: 2023-0001</p>
-          <p class="text-lg text-gray-600 dark:text-gray-400">BS Information Technology</p>
-          <p class="text-lg text-gray-600 dark:text-gray-400">Class of 2023</p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">Issued by: BTECH Alumni Office</p>
+        {{-- End --}}
+        {{-- Start --}}
+        <div class="flex">
+          <div class="mr-4">
+            <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-[#fcb92c]">
+              <svg class="w-8 h-8 text-deep-purple-accent-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h6 class="mb-2 font-semibold leading-5">Benifits 2</h6>
+            <p class="text-sm text-gray-900">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+          </div>
         </div>
-
-        <!-- QR Code -->
-        <div class="mt-8 md:mt-0">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=JaneDoe-2023-0001" alt="QR Code"
-            class="w-36 h-36">
+        {{-- End --}}
+        {{-- Start --}}
+        <div class="flex">
+          <div class="mr-4">
+            <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-[#fcb92c]">
+              <svg class="w-8 h-8 text-deep-purple-accent-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h6 class="mb-2 font-semibold leading-5">Benifits 3</h6>
+            <p class="text-sm text-gray-900">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+          </div>
         </div>
+        {{-- End --}}
 
       </div>
-    </div> --}}
+    </div>
+
+
+
+
 
     <div class="mt-10 sm:mt-6 text-center ">
-  <p class="text-sm text-gray-600 dark:text-gray-400">
-   Need help with your ID? 
-    <a href="{{ route('help-center') }}" class="text-blue-600 hover:underline">
-      Contact admin here.
-    </a>
-  </p>
-</div>
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        Need help with your ID?
+        <a href="{{ route('help-center') }}" class="text-blue-600 hover:underline">
+          Contact admin here.
+        </a>
+      </p>
+    </div>
 
 
 
