@@ -46,6 +46,10 @@ Route::get('/announcement', function () {
     return view('client.announcement');
 })->name('announcement');
 
+Route::get('/tracer-study', function () {
+    return view('client.tracer-study');
+})->name('tracer-study');
+
 Route::get('/profile', function () {
     return view('client.profile');
 })->name('profile');

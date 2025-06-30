@@ -24,12 +24,12 @@
       />
     
     {{-- @if (!request()->is('help-center')) --}}
-        <div class=" h-screen scrollbarMain overflow-y-scroll">
+        <div class=" h-screen  scrollbarMain overflow-y-scroll ">
             <div  class="flex-grow items-center  justify-center mt-16">
                 {{ $slot }}
             </div>
 
-            @if (!request()->is('account/settings') && !request()->is('alumni-id') && !request()->is('donate-us') && !request()->is('help-center') && !request()->is('questionnaire'))
+            @if (!request()->is('account/settings') && !request()->is('alumni-id') && !request()->is('donate-us') && !request()->is('help-center') && !request()->is('questionnaire') && !request()->is('home'))
                 <x-client-components.client-footer/>
             @endif
         </div>
@@ -45,6 +45,9 @@
     <script src="{{ asset('assets/js/navbar.js') }}"></script>
     <script src="{{ asset('assets/js/darkMode.js') }}"></script>
     @stack('scripts')
+    @if (!request()->is('announcement'))
+        {{-- <script src="{{ asset('assets/js/navbar-animation.js') }}"></script> --}}
+    @endif
 </body>
 
 </html>

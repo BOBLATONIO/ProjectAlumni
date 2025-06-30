@@ -1,26 +1,8 @@
-//Show Hide Header Animation when scrolling
-$(document).ready(function () {
-    let lastScrollTop = 0;
-    let navbar = $("header");
 
-    $(".scrollbarMain").on("scroll", function () {  
-        let currentScroll = $(this).scrollTop(); 
-
-        if (currentScroll > lastScrollTop) {
-            navbar.stop().animate({ top: "-100px" }, 400);
-        } else {
-            navbar.stop().animate({ top: "0" }, 400);
-        }
-
-        lastScrollTop = currentScroll;
-    });
-});
 
 
 
 $(document).ready(function () {
-
-    
         $(".aprnce-btn").click(function (event) {
             event.stopPropagation(); 
             $(".aprnce-radio").slideToggle().toggleClass("hidden static active");
@@ -83,11 +65,10 @@ $(document).ready(function () {
 // JavaScript for Profile Dropdown in LargeScreen
 //SECOND FUNCTION
 $(document).ready(function () {
-    $(".profile-dropdown, .name-container, .profile-picture").click(function (event) {
+    $(".profile-dropdown").click(function (event) {
         event.stopPropagation(); //para after click hindi mag colapse agad yung dropdown
         $(".profile-dropdown-content").slideToggle();
         $(".profile-dropdown").toggleClass("active"); 
-        
         
 
         if ($(".profile-dropdown").hasClass("active")) {
@@ -108,7 +89,7 @@ $(document).ready(function () {
     });
 
     $(document).click(function (event) {
-        if (!$(event.target).closest(" .profile-dropdown, .name-container, .profile-dropdown-content").length) {
+        if (!$(event.target).closest(" .profile-dropdown, .profile-dropdown-content").length) {
             $(".profile-dropdown-content").slideUp();
             $(".profile-dropdown").removeClass("active").html(`
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 stroke-gray-500 dark:stroke-gray-200">

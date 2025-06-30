@@ -1,14 +1,14 @@
 <x-layout.client-layout>
     <div class=" max-w-screen-xl px-6 py-12 mx-auto">
         
-        <x-client-components.client-page-header 
+        {{-- <x-client-components.client-page-header 
         title="Your Official Alumni ID"
         body="Stay informed and never miss out on important updates. Our announcements keep you in the loop with the latest
     news, events, and essential information to help you stay connected and engaged with our community."
-      />
+      /> --}}
 
         <div class="annoucement-container mt-8 mx-auto flex flex-col items-center">
-            <div class="flex flex-col gap-5">
+            {{-- <div class="flex flex-col gap-5">
                 <div class="announcement max-w-[700px] w-full bg-white shadow-md rounded-lg p-4">
                     <div class="flex items-center space-x-3">
                         <div>
@@ -121,7 +121,7 @@
                             class="w-full rounded-lg border border-indigo-300 hover:shadow-lg transition cursor-pointer">
                     </div>
                 </div>
-            </div>
+            </div> --}}
             
             
 

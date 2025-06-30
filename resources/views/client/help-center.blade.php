@@ -3,11 +3,13 @@
         <x-client-components.client-page-header title="Your Alumni Help Center"
             body="Browse our FAQs for instant solutions or contact the Alumni Office for more detailed assistance." />
         <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3 px-2">
-            
-                <x-client-components.client-faq />
-                <x-client-components.client-faq />
-            
-            
+
+            <x-client-components.client-faq />
+            <x-client-components.client-faq />
+            <x-client-components.client-faq />
+            <x-client-components.client-faq />
+
+
         </div>
 
     </div>
@@ -34,8 +36,9 @@
     {{-- use GET to display chat box (hidden is alternative) --}}
     <div
         class="chat-box fixed hidden w-full h-[calc(100%-64px)] bottom-0 right-0 sm:right-10 sm:h-[500px] sm:w-[350px] border  bg-gray-50 flex flex-col sm:rounded-t-xl shadow-lg ">
-        
-        <div class="border-b text-gray-900  py-2 px-4 text-md font-bold sm:font-semibold flex items-center justify-between">
+
+        <div
+            class="border-b text-gray-900  py-2 px-4 text-md font-bold sm:font-semibold flex items-center justify-between">
             <span>Chat with Us!</span>
             <button class="close-chat p-1 hover:bg-gray-200 rounded">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
