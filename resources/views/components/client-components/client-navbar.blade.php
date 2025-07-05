@@ -39,13 +39,13 @@
                             <span class=" h-[2px] w-[84px] bg-[#273461] dark:bg-white mx-auto mt-1 mb-[-5px]
                                     {{ request()->is('tracer-study') ? 'block' : 'hidden' }}"></span>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a class=" transition dark:hover:text-white  whitespace-nowrap     
                                 {{ request()->is('announcement') ? 'text-[#273461]  font-semibold dark:text-white' : 'hover:text-gray-500 text-gray-700 dark:text-gray-300' }}"
                                 href="{{ route('announcement') }}">Announcement</a>
                             <span class=" h-[2px] w-[100px] bg-[#273461] dark:bg-white mx-auto mt-1 mb-[-5px]
                                     {{ request()->is('announcement') ? 'block' : 'hidden' }}"></span>
-                        </li>
+                        </li> --}}
                         <li>
                             <a class=" transition dark:hover:text-white  whitespace-nowrap     
                                 {{ request()->is('network') ? 'text-[#273461]  font-semibold dark:text-white' : 'text-gray-700 hover:text-gray-500 dark:text-gray-300' }}"

@@ -21,26 +21,24 @@
       name="Bini tine Cruz" 
       email="202121442@btech.ph.education" 
       imageSrc="{{ asset('assets/images/Profile.jpeg') }}"
-      />
-    
-    {{-- @if (!request()->is('help-center')) --}}
-        <div class=" h-screen  scrollbarMain overflow-y-scroll ">
-            <div  class="flex-grow items-center  justify-center mt-16">
-                {{ $slot }}
-            </div>
-
-            @if (!request()->is('account/settings') && !request()->is('alumni-id') && !request()->is('donate-us') && !request()->is('help-center') && !request()->is('questionnaire') && !request()->is('home'))
-                <x-client-components.client-footer/>
-            @endif
-        </div>
-    {{-- @endif --}}
-    
-
-    {{-- @if (request()->is('help-center'))
-        <div class="">
+    />
+     
+    <div class=" h-screen  {{ request()->is('home') ? 'overflow-hidden' : 'scrollbarMain overflow-y-scroll' }} ">
+        <div  class="flex-grow items-center justify-center mt-16">
             {{ $slot }}
         </div>
-    @endif --}}
+
+        @if (!request()->is('account/settings') && !request()->is('alumni-id') && !request()->is('donate-us') && !request()->is('help-center') && !request()->is('questionnaire') && !request()->is('home'))
+            <x-client-components.client-footer/>
+        @endif
+    </div>
+
+    @isset($modal)
+        {{ $modal }}
+    @endisset
+
+
+    
 
     <script src="{{ asset('assets/js/navbar.js') }}"></script>
     <script src="{{ asset('assets/js/darkMode.js') }}"></script>
