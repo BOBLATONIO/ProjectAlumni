@@ -558,7 +558,7 @@
     <x-slot:modal>
         <div class="fixed hidden inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
             <div
-                class="bg-white flex text-gray-900 w-full h-full max-w-[calc(100vw-100px)] max-h-[calc(100vh-100px)] m-[100px] rounded-lg shadow-lg overflow-auto">
+                class="bg-white flex flex-col  text-gray-900 w-full h-full  rounded-lg shadow-lg overflow-auto lg:flex-row lg:max-w-[calc(100vw-100px)] lg:max-h-[calc(100vh-100px)] lg:m-[100px]">
                 <div
                     class="relative h-full w-full bg-black flex items-center justify-center overflow-hidden carousel-container">
                     <button
@@ -638,8 +638,7 @@
                     });
                 </script>
 
-
-                <div class="w-[700px] h-full relative">
+                <div class=" w-full h-[550px] lg:w-[700px] lg:h-full relative">
                     <div class="overflow-y-auto w-full h-[calc(100%-70px)]">
                         <div class="flex justify-between items-center p-4 pb-1 ">
                             <div class="flex items-center mb-2">
