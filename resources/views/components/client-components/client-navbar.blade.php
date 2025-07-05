@@ -73,7 +73,7 @@
 
 
                 <div class="hidden md:flex items-center gap-2 p-2 rounded-lg relative ">
-                    <a href="{{ route('profile') }}" class="flex items-center gap-2">
+                    <div class="flex items-center gap-2">
                         <img class="h-11 min-w-11 rounded-full object-cover border border-gray-500 dark:text-gray-300 dark:hover:text-white shadow-sm cursor-pointer"
                             src="{{ asset($imageSrc) }}" alt="Profile Picture">
                         <div class="text-sm max-900:hidden cursor-pointer">
@@ -85,7 +85,7 @@
                                 class="text-gray-500 dark:text-gray-200 text-xs w-36 overflow-hidden text-ellipsis whitespace-nowrap">
                                 {{ $email }}</div>
                         </div>
-                    </a>
+                    </div>
                     <!--Start of dropdown button-->
                     <div class="profile-dropdown cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
@@ -108,7 +108,7 @@
                                         d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 </svg>
 
-                                <a class="block  w-full" href="{{ route('profile') }}">Your Profile</a>
+                                <a class="block  w-full" href="{{ route('your-post') }}">Your Post</a>
                             </li>
                             <li
                                 class="  h-8 flex items-center relative gap-3 cursor-pointer hover:bg-gray-200 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E]">
@@ -264,7 +264,7 @@
                         @if (!request()->is('questionnaire'))
                         <li
                             class="px-4 py-2 flex items-center  cursor-pointer hover:bg-gray-200 dark:hover:dark:hover:bg-[#3B3D3E] transition-all rounded-md">
-                            <a class="block w-full" href="{{ route('profile') }}">Your Profile</a>
+                            <a class="block w-full" href="{{ route('your-post') }}">Your Post</a>
                         </li>
                         <li
                             class="px-4 py-2 flex items-center  cursor-pointer hover:bg-gray-200 dark:hover:dark:hover:bg-[#3B3D3E] transition-all rounded-md">

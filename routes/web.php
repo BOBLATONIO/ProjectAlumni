@@ -50,9 +50,9 @@ Route::get('/tracer-study', function () {
     return view('client.tracer-study');
 })->name('tracer-study');
 
-Route::get('/profile', function () {
-    return view('client.profile');
-})->name('profile');
+Route::get('/your-post', function () {
+    return view('client.your-post');
+})->name('your-post');
 
 Route::get('/network', function () {
     return view('client.network');

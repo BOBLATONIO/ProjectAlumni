@@ -1,87 +1,7 @@
 <x-layout.client-layout>
-    <div class="flex min-h-screen">
-        <!-- Sidebar -->
-        <aside class="flex-1  bg-white pt-4 w-72 shadow-md overflow-y-auto h-[calc(100vh-64px)] fixed">
-            <div class=" relative h-full  flex flex-col justify-between">
-                <div class="">
-                    <div class="flex flex-col text-md mt-2">
-                        <a href="{{ route('your-post') }}"
-                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E]">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="h-8 min-w-8 rounded-full object-cover text-gray-800 dark:text-gray-300 dark:hover:text-white  cursor-pointer">
-                                <path fill-rule="evenodd"
-                                    d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <div class="block  w-full" >Your Post</div>
-                        </a>
-                        <a href="{{ route('alumni-id') }}"
-                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E]">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="h-8 min-w-8 rounded-full object-cover text-gray-800 dark:text-gray-300 dark:hover:text-white  cursor-pointer">
-                                <path fill-rule="evenodd"
-                                    d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <div class="block w-full" >My Alumni ID</div>
-                        </a>
-                        <a href="{{ route('donate-us') }}"
-                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E]">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="h-8 min-w-8 rounded-full object-cover text-gray-800  dark:text-gray-300 dark:hover:text-white  cursor-pointer">
-                                <path
-                                    d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
-                            </svg>
-
-                            <div class="block  w-full" >Donate Us</div>
-                        </a>
-                        <a href="{{ route('help-center') }}"
-                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E]">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="h-8 min-w-8 rounded-full object-cover text-gray-800 dark:text-gray-300 dark:hover:text-white  cursor-pointer">
-                                <path fill-rule="evenodd"
-                                    d="M4.804 21.644A6.707 6.707 0 0 0 6 21.75a6.721 6.721 0 0 0 3.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 0 1-.814 1.686.75.75 0 0 0 .44 1.223ZM8.25 10.875a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25ZM10.875 12a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm4.875-1.125a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-                            <div class="block  w-full" >Help Center</div>
-                        </a>
-
-
-
-                    </div>
-
-                    <div>
-                        <h2 class="px-6 text-sm font-semibold mt-6 mb-3">Upcoming Events</h2>
-                        <div class="mx-3 flex flex-col">
-                            {{-- open modal post --}}
-                            <a href=""
-                                class="px-3 rounded-md hover:bg-gray-100 py-2 flex items-center gap-2">
-                                <img class="h-11 max-w-11  object-cover border border-gray-500 dark:text-gray-300 dark:hover:text-white shadow-sm cursor-pointer"
-                                    src="{{ asset('assets/images/SampleAnnounImage.jpg') }}" alt="Profile Picture">
-                                <div class="text-sm max-900:hidden cursor-pointer">
-                                    <!--max-900 is a custom css-->
-                                    <div
-                                        class="font-medium w-36 text-gray-700 dark:text-white overflow-hidden text-ellipsis whitespace-nowrap uppercase">
-                                        Board Review</div>
-                                    <div
-                                        class="text-gray-500 dark:text-gray-200 text-xs w-36 overflow-hidden text-ellipsis whitespace-nowrap">
-                                        Sat 16 June, 2025</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="px-6 text-xs text-gray-500 mt-8 pb-4">
-                    © 2025 BTECH. All rights reserved.
-                </div>
-            </div>
-
-        </aside>
-
-        <!-- Main Content -->
-        <main class="flex-1 p-4 space-y-4 mx-72 overflow-y-auto h-[calc(100vh-64px)] fixed">
+    <div class="max-w-screen-xl sm:px-6  mx-auto flex flex-col items-center">
+        <h2 class="text-3xl mt-6 mb-2 font-bold text-[#273461] dark:text-[#5a7eff]">Your Post</h2>
+        <main class="flex-1 p-4 space-y-4 sm:mx-auto w-full sm:w-[650px]  overflow-y-auto h-[calc(100vh-64px)]">
             {{-- Post Box --}}
             <div class="w-full flex items-center bg-white rounded-md shadow p-4">
                 <img src="{{ asset('assets/images/Profile.jpeg') }}" alt="Profile"
@@ -92,14 +12,14 @@
                         What's on your mind?
                     </button>
 
-                    <button class="bg-gray-200 px-2 h-10 rounded-full">
+                    <button class="bg-gray-200 px-2 h-10 hidden sm:flex rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6 text-gray-600">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                         </svg>
                     </button>
-                    <button class="bg-gray-200 px-2 h-10 rounded-full">
+                    <button class="bg-gray-200 px-2 h-10 hidden sm:flex  rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6 text-gray-600">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -119,7 +39,9 @@
                         class="h-10 min-w-10 rounded-full object-cover mr-2">
                     <div class="">
                         <div class="uppercase text-md text-gray-900">Bobson Latonio</div>
-                        <p class="text-sm -mt-1 text-gray-600">20 min. ago</p>
+                        <div class="">
+                            <div class="text-sm -mt-1 text-red-600">for approval</div>
+                        </div>
                     </div>
                 </div>
                 <p class="mb-4 text-gray-800 text-sm">LIBRENG REVIEW PARA SA CIVIL SERVICE EXAMINATION handog ng
@@ -374,7 +296,7 @@
                     ngayong Agosto 11, 2024? Handa ka na bang harapin ang hamon ng pagiging isang
                     lingkod-bayan?</p>
 
-                <div class="grid grid-cols-3 gap-2">
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
@@ -423,7 +345,7 @@
                     ngayong Agosto 11, 2024? Handa ka na bang harapin ang hamon ng pagiging isang
                     lingkod-bayan?</p>
 
-                <div class="grid grid-cols-4 gap-2">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
@@ -472,7 +394,7 @@
                     ngayong Agosto 11, 2024? Handa ka na bang harapin ang hamon ng pagiging isang
                     lingkod-bayan?</p>
 
-                <div class="grid grid-cols-4 gap-2">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
@@ -511,54 +433,40 @@
             </div>
         </main>
 
-        <!-- Right Sidebar -->
-        <aside class="flex-1 w-[288px] h-[calc(100vh-64px)] fixed right-0 bottom-0">
-            <div class="w-full h-full overflow-y-auto pr-4 pb-4 space-y-4">
-                <div class="bg-white w-full rounded shadow mt-4  ">
-                    <div class="flex mb-2 pt-4 px-5 items-center justify-between">
-                        <div class=" text-sm font-medium">Network</div>
-                        <button class="text-sm hover:underline text-blue-600">See all</button>
-
-                    </div>
-                    <ul class="text-sm text-gray-700 pb-2 flex flex-col">
-                        <li class="flex items-center  py-2 px-3 mx-2 gap-1.5">
-                            <img class="h-9 min-w-9 rounded-full object-cover border border-gray-500 dark:text-gray-300 dark:hover:text-white shadow-sm cursor-pointer"
-                                src="{{ asset('assets/images/Profile.jpeg') }}" alt="Profile Picture">
-                            <div class="font-semibold truncate">JUAN DELA CRUZ</div>
-                        </li>
+        {{-- <div class="w-3/4">
+            <div class="relative">
+                <img src="{{ asset('assets/images/profile-bg.jpg') }}" alt="Cover"
+                    class="w-full h-60 object-cover rounded-b-xl">
 
 
-
-
-                    </ul>
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 rounded-b-xl">
                 </div>
-                <div class="bg-white w-full rounded shadow mt-2  ">
-                    <div class="flex mb-2 pt-4 px-5 items-center justify-between">
-                        <div class=" text-sm font-medium">Officers</div>
-                        <button class="text-sm hover:underline text-blue-600">See all</button>
-                    </div>
-                    <ul class="text-sm text-gray-700 pb-2 flex flex-col">
-                        <li class="flex items-center py-2 px-3 mx-2 gap-1.5">
-                            <img class="h-9 min-w-9 rounded-full object-cover border border-gray-500 dark:text-gray-300 dark:hover:text-white shadow-sm cursor-pointer"
-                                src="{{ asset('assets/images/Profile.jpeg') }}" alt="Profile Picture">
-                            <div class="flex flex-col">
-                                <div class="font-semibold truncate">JUAN DELA CRUZ</div>
-                                <div class="-mt-1 text-sm text-gray-700">President</div>
-                            </div>
-                        </li>
 
-                    </ul>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                    <div class=" mb-4">
+                        <div class="w-32 h-32 rounded-full border-2 border-gray-100 overflow-hidden">
+                            <img src="{{ asset('assets/images/alumni-id-pic.jpeg') }}" alt="Zion Logo"
+                                class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h1 class="text-xl font-semibold text-white uppercase">Rhon Harvey Lacsina</h1>
                 </div>
             </div>
+        </div>
 
-        </aside>
+        <div class="mt-2">
+            <div class="text-sm text-gray-800">Your Post</div>
+
+        </div> --}}
     </div>
 
-    {{-- Create Post Modal --}}
+
     <x-slot:modal>
-        <div class="fixed hidden inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
+        <div class="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
+            {{-- --}}
             <div
-                class="bg-white flex text-gray-900 w-full h-full max-w-[calc(100vw-100px)] max-h-[calc(100vh-100px)] m-[100px] rounded-lg shadow-lg overflow-auto">
+                class="bg-white flex flex-col  text-gray-900 w-full h-full  rounded-lg shadow-lg overflow-auto lg:flex-row lg:max-w-[calc(100vw-100px)] lg:max-h-[calc(100vh-100px)] lg:m-[100px]">
                 <div
                     class="relative h-full w-full bg-black flex items-center justify-center overflow-hidden carousel-container">
                     <button
@@ -638,8 +546,7 @@
                     });
                 </script>
 
-
-                <div class="w-[700px] h-full relative">
+                <div class=" w-full h-[550px] lg:w-[700px] lg:h-full relative">
                     <div class="overflow-y-auto w-full h-[calc(100%-70px)]">
                         <div class="flex justify-between items-center p-4 pb-1 ">
                             <div class="flex items-center mb-2">
@@ -761,352 +668,6 @@
             </div>
 
         </div>
-
-
-
-        <div class="fixed hidden inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
-            <div class="bg-white text-gray-900 w-full max-w-lg rounded-lg shadow-lg p-4">
-                <div class="flex justify-between items-center border-b pb-2">
-                    <h2 class="text-lg font-semibold">Create post</h2>
-                    <button class="text-gray-500 hover:text-gray-800 text-xl">✕</button>
-                </div>
-
-                <div class="flex items-center gap-3 mt-4 mb-3">
-                    <img src="{{ asset('assets/images/Profile.jpeg') }}" alt="Profile Picture"
-                        class="h-10 min-w-10 rounded-full object-cover">
-                    <div>
-                        <div class="font-semibold uppercase text-sm">Bobson Latonio</div>
-                        <div class="text-sm -mt-1 text-gray-700">
-                            Alumni •
-                        </div>
-                    </div>
-                </div>
-
-                <div class="overflow-y-auto max-h-[250px] -mr-4 pr-4">
-                    <textarea id="autoGrow"
-                        class="w-full bg-transparent focus:outline-none placeholder-gray-500 placeholder:text-xl mt-4 resize-none overflow-hidden"
-                        rows="3" style="overflow:hidden" placeholder="What's on your mind?"></textarea>
-
-                    <script>
-                        $('#autoGrow').on('input', function () {
-                            this.style.height = 'auto';
-                            this.style.height = this.scrollHeight + 'px';
-                        });
-                    </script>
-
-                    <div class="flex flex-col gap-1 mb-2">
-                        <div
-                            class=" group w-full h-[30px] flex-shrink-0 bg-gray-50 border rounded flex items-center justify-between text-center p-2">
-                            <div class="flex gap-2 ml-2 items-center">
-                                <div class="text-3xl text-gray-600 ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6">
-                                        <path
-                                            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
-                                        <path
-                                            d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
-                                    </svg>
-
-                                </div>
-                                <div class="text-xs w-full line-clamp-4 break-words">
-                                    Document Ni Jose Rizal.docx
-                                </div>
-                            </div>
-                            <button
-                                class=" bg-gray-100 text-gray-700 mr-1 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div
-                            class=" group w-full h-[30px] flex-shrink-0 bg-gray-50 border rounded flex items-center justify-between text-center p-2">
-                            <div class="flex gap-2 ml-2 items-center">
-                                <div class="text-3xl text-gray-600 ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6">
-                                        <path
-                                            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
-                                        <path
-                                            d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
-                                    </svg>
-
-                                </div>
-                                <div class="text-xs w-full line-clamp-4 break-words">
-                                    Document Ni Jose Rizal.docx
-                                </div>
-                            </div>
-                            <button
-                                class=" bg-gray-100 text-gray-700 mr-2 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div
-                            class=" group w-full h-[30px] flex-shrink-0 bg-gray-50 border rounded flex items-center justify-between text-center p-2">
-                            <div class="flex gap-2 ml-2 items-center">
-                                <div class="text-3xl text-gray-600 ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6">
-                                        <path
-                                            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
-                                        <path
-                                            d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
-                                    </svg>
-
-                                </div>
-                                <div class="text-xs w-full line-clamp-4 break-words">
-                                    Document Ni Jose Rizal.docx
-                                </div>
-                            </div>
-                            <button
-                                class=" bg-gray-100 text-gray-700 mr-2 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div
-                            class=" group w-full h-[30px] flex-shrink-0 bg-gray-50 border rounded flex items-center justify-between text-center p-2">
-                            <div class="flex gap-2 ml-2 items-center">
-                                <div class="text-3xl text-gray-600 ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6">
-                                        <path
-                                            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
-                                        <path
-                                            d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
-                                    </svg>
-
-                                </div>
-                                <div class="text-xs w-full line-clamp-4 break-words">
-                                    Document Ni Jose Rizal.docx
-                                </div>
-                            </div>
-                            <button
-                                class=" bg-gray-100 text-gray-700 mr-2 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-4 gap-1 pb-3">
-                        {{-- Image --}}
-                        <div class="relative group">
-                            <div class="h-[117px] rounded w-auto overflow-hidden relative">
-                                <img src="https://picsum.photos/500/100" alt="Example Image"
-                                    class="h-full aspect-square object-cover" />
-                            </div>
-                            <button
-                                class="absolute top-1 right-1 bg-gray-100 text-gray-700 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        {{-- Image --}}
-                        <div class="relative group">
-                            <div class="h-[117px] rounded w-auto overflow-hidden relative">
-                                <img src="https://picsum.photos/500/500" alt="Example Image"
-                                    class="h-full aspect-square object-cover" />
-                            </div>
-
-                            <button
-                                class="absolute top-1 right-1 bg-gray-100 text-gray-700 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-
-
-                    </div>
-
-                </div>
-                <div class="text-xs text-red-700">
-                    Error: Your files can't be uploaded.
-                </div>
-
-                <div class=" border border-gray-300 shadow-sm p-2 rounded-md mt-3">
-                    <div class="flex justify-between items-center text-xl mx-2">
-                        <p class="text-base text-gray-600">Add to your post</p>
-                        <div class="flex gap-2">
-                            <button class="bg-gray-200 px-2 h-10 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                                </svg>
-                            </button>
-                            <button class="bg-gray-200 px-2 h-10 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-1 text-xs text-gray-600">
-                    Note: All posts must be approved by the admin before they become public.
-                </div>
-                <button class="w-full mt-6 bg-gray-800 text-gray-200 cursor-not-allowed rounded-md py-2 font-semibold">
-                    Post
-                </button>
-
-            </div>
-        </div>
-
     </x-slot:modal>
-
-
-    {{-- <div class="relative flex flex-col text-center justify-center w-full lg:max-h-[600px] -mt-16 h-[calc(100vh-110px)] mb-14 
-            bg-cover bg-center bg-no-repeat"
-        style="background-image: url({{ asset('assets/images/graduatesBG.jpg') }});">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="z-40">
-
-            <h1 class="text-5xl font-bold title-font mb-4 text-gray-50 ">
-                Welcome Home, Alumni <br>
-            </h1>
-            <p class="lg:w-[450px] mx-auto leading-relaxed text-gray-200 text-base ">
-                Stay connected, share experiences, and collaborate with fellow alumni to inspire and grow together!
-            </p>
-        </div>
-        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-0"></div>
-        <div class="absolute flex flex-col items-center bottom-6 left-1/2 transform -translate-x-1/2">
-
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-7 h-7 text-gray-100 animate-bounce">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-            </svg>
-        </div>
-    </div> --}}
-
-    {{-- Network - Feature Section --}}
-    {{-- <div class="flex justify-center mb-14">
-        <div class="flex flex-col md:flex-row  max-w-screen-xl">
-            <div class="md:w-1/2 w-full  text-gray-950 flex items-center px-10 py-16">
-                <div>
-                    <p class="text-lg text-gray-400">We are creative team</p>
-                    <h1 class="text-4xl md:text-5xl font-bold mt-4 leading-tight">
-                        Innovative solutions to <br /> boost your projects
-                    </h1>
-                    <p class="text-gray-400 mt-6 max-w-md">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elitdo eiusmod tempor incididunt ut labore
-                        dolore
-                        magna utenim minim veniam nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                    </p>
-                    <button
-                        class="mt-8 bg-white text-[#0d1128] font-semibold px-6 py-3 rounded shadow hover:bg-gray-200">
-                        View Services
-                    </button>
-                </div>
-            </div>
-
-            <div class="md:w-1/2 w-full">
-                <img src="{{ asset('assets/images/network-feature.jpg') }}" alt="Smiling Woman"
-                    class="w-full h-full object-cover">
-            </div>
-        </div>
-    </div> --}}
-
-    {{-- <section>
-        <div class="mx-auto max-w-screen-xl px-4 bg-gray-50 border rounded-lg py-8 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
-                <div>
-                    <img src="/assets/images/SampleAnnounImage.jpg" class="rounded" alt="" />
-                </div>
-                <div>
-                    <div class="max-w-lg md:max-w-none">
-                        <div class="text-sm title-font text-gray-500 tracking-widest">
-                            Btech Baliwag
-                        </div>
-                        <div class="text-2xl font-semibold text-gray-900 uppercase">
-                            Libreng Virtual Review para sa Licensure Examination for Teachers
-                        </div>
-
-                        <div class="mt-4 text-gray-700 text-sm line-clamp-6" id="textContainer">
-                            LIBRENG REVIEW PARA SA CIVIL SERVICE EXAMINATION
-                            handog ng Dalubhasaang Politekniko ng Lungsod ng Baliwag (BTECH)
-                            Gusto mo bang magtagumpay sa Civil Service Examination mo ngayong Agosto 11,
-                            2024? Handa ka na bang harapin ang hamon ng pagiging isang lingkod-bayan?
-                            Para sa lahat ng interesado, inaanyayahan namin kayo sa LIBRENG Civil Service
-                            Examination Virtual Review ngayong Hulyo 5, 2024 – Agosto 9, 2024, 5:30 ng hapon
-                            – 8:30 ng gabi.
-                            Ano ang mga aasahan mo?
-                            1. Komprehensibong pagsusuri ng mga kahalagahan sa Civil Service Exam
-                            2. Masususing Pagsasanay sa mga sumusunod na paksa:
-                            • Pag-unawa sa Eksaminasyong Sibil
-                            • Talasalitaan at Pagbaybay (Vocabulary and Spelling)
-                            • Balarila sa Ingles at Tamang Gamit (Grammar and Correct Usage)
-                            • Pagsusuri ng Binabasa (Reading Comprehension)
-                            • Sulat Pakikipagtalastasan at Pagsulat ng Sanaysay (Written Communication and
-                            Essay Writing)
-                            • Operasyong Klerikal (Clerical Operations)
-                            • Matematikang Operasyon, Paglutas ng Problema, at Numerikal na Pagsusuri
-                            (Mathematical Operations, Problem-solving, and Numerical Reasoning)
-                            • Lohikal na Pagsusuri at Analitikal na Kakayahan (Logical Reasoning and
-                            Analytical Skills)
-                            • Pangkalahatang Kaalaman Tungkol sa Agham, Teknolohiya, at Sining (General
-                            Knowledge About Science, Technology, and The Arts)
-                            • Mga Kasalukuyang Pangyayari at Mga Napapanahong Isyu (Current Events and
-                            Contemporary Issues)
-                            • Pamamahala at Pangangalaga sa Kapaligiran (Environment Management &
-                            Protection)
-                            • Kasaysayan ng Pilipinas, Sistema ng Pamahalaan, at Ang Saligang Batas
-                            (Philippine History, Government Systems, and The Constitution)
-                            • Pangkalahatang Kaalaman Tungkol sa Agham, Teknolohiya, at Sining (General
-                            Knowledge About Science, Technology, and The Arts)
-                            • Mga Isyu at Konsepto ng Kapayapaan at Karapatang Pantao (Peace & Human Rights
-                            Issues and Concepts)
-                            • R.A. 6713: Kodigo ng Pag-uugali at Mga Pamantayang Etikal para sa mga Opisyal
-                            at Empleyado ng Pamahalaan (R.A. 6713: Code of Conduct & Ethical Standards for
-                            Public Officials & Employees)
-                            3. Kasanayan para sa epektibong pagsagot sa mga tanong.
-                            Mga Kwalipikasyon at Dokumento na Kailangang Isumite
-                            1. Pilipino, Edad 18 pataas
-                            2. Nakatala na kukuha ng Civil Service Examination ngayong paparating na Agosto
-                            11, 2024
-                            3. Kopya ng isang beripikadong pagkakakilanlan (Valid ID)
-                            4. Kopya ng iyong NOSA (Notice of School Assignment)
-                            5. Larawan ng pagkakakilanlan (Passport Size ID Picture in formal attire & white
-                            background)
-                            6. Long Brown Envelop
-                        </div>
-                        <a class="hover:text-blue-400 hover:underline text-sm font-medium">See more</a>
-
-                        <button
-                            class="flex items-center justify-center px-5 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg hover:bg-gray-100">
-                            <div class="flex items-center justify-center pr-2 py-1">
-                                <svg class="h-8 w-8 " fill="rgb(23, 107, 251)" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 64 64">
-                                    <path
-                                        d="M32,6C17.642,6,6,17.642,6,32c0,13.035,9.603,23.799,22.113,25.679V38.89H21.68v-6.834h6.433v-4.548	c0-7.529,3.668-10.833,9.926-10.833c2.996,0,4.583,0.223,5.332,0.323v5.965h-4.268c-2.656,0-3.584,2.52-3.584,5.358v3.735h7.785
-                                            l-1.055,6.834h-6.73v18.843C48.209,56.013,58,45.163,58,32C58,17.642,46.359,6,32,6z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <span class="text-sm"> View Post </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section> --}}
-
 
 </x-layout.client-layout>
