@@ -463,8 +463,7 @@
 
 
     <x-slot:modal>
-        <div class="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
-            {{-- --}}
+        <div class="fixed inset-0 hidden bg-black bg-opacity-40 z-50 flex items-center justify-center">
             <div
                 class="bg-white flex flex-col  text-gray-900 w-full h-full  rounded-lg shadow-lg overflow-auto lg:flex-row lg:max-w-[calc(100vw-100px)] lg:max-h-[calc(100vh-100px)] lg:m-[100px]">
                 <div
@@ -667,6 +666,206 @@
 
             </div>
 
+        </div>
+
+        <div class="fixed inset-0 hidden bg-black bg-opacity-40 z-50 flex items-center justify-center">
+            <div class="bg-white text-gray-900 h-full sm:h-auto w-full max-w-lg rounded-lg shadow-lg p-4">
+                <div class="flex justify-between items-center border-b pb-2">
+                    <h2 class="text-lg font-semibold">Create post</h2>
+                    <button class="text-gray-500 hover:text-gray-800 text-xl">✕</button>
+                </div>
+
+                <div class="flex items-center gap-3 mt-4 mb-3">
+                    <img src="{{ asset('assets/images/Profile.jpeg') }}" alt="Profile Picture"
+                        class="h-10 min-w-10 rounded-full object-cover">
+                    <div>
+                        <div class="font-semibold uppercase text-sm">Bobson Latonio</div>
+                        <div class="text-sm -mt-1 text-gray-700">
+                            Alumni •
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overflow-y-auto max-h-[calc(100vh-330px)] sm:max-h-[250px] -mr-4 pr-4">
+                    <textarea id="autoGrow"
+                        class="w-full bg-transparent focus:outline-none placeholder-gray-500 placeholder:text-xl mt-4 resize-none overflow-hidden"
+                        rows="3" style="overflow:hidden" placeholder="What's on your mind?"></textarea>
+
+                    <script>
+                        $('#autoGrow').on('input', function () {
+                            this.style.height = 'auto';
+                            this.style.height = this.scrollHeight + 'px';
+                        });
+                    </script>
+
+                    <div class="flex flex-col gap-1 mb-2">
+                        <div
+                            class=" group w-full h-[30px] flex-shrink-0 bg-gray-50 border rounded flex items-center justify-between text-center p-2">
+                            <div class="flex gap-2 ml-2 items-center">
+                                <div class="text-3xl text-gray-600 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="size-6">
+                                        <path
+                                            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
+                                        <path
+                                            d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                                    </svg>
+
+                                </div>
+                                <div class="text-xs w-full line-clamp-4 break-words">
+                                    Document Ni Jose Rizal.docx
+                                </div>
+                            </div>
+                            <button
+                                class=" bg-gray-100 text-gray-700 mr-1 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class=" group w-full h-[30px] flex-shrink-0 bg-gray-50 border rounded flex items-center justify-between text-center p-2">
+                            <div class="flex gap-2 ml-2 items-center">
+                                <div class="text-3xl text-gray-600 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="size-6">
+                                        <path
+                                            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
+                                        <path
+                                            d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                                    </svg>
+
+                                </div>
+                                <div class="text-xs w-full line-clamp-4 break-words">
+                                    Document Ni Jose Rizal.docx
+                                </div>
+                            </div>
+                            <button
+                                class=" bg-gray-100 text-gray-700 mr-2 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class=" group w-full h-[30px] flex-shrink-0 bg-gray-50 border rounded flex items-center justify-between text-center p-2">
+                            <div class="flex gap-2 ml-2 items-center">
+                                <div class="text-3xl text-gray-600 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="size-6">
+                                        <path
+                                            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
+                                        <path
+                                            d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                                    </svg>
+
+                                </div>
+                                <div class="text-xs w-full line-clamp-4 break-words">
+                                    Document Ni Jose Rizal.docx
+                                </div>
+                            </div>
+                            <button
+                                class=" bg-gray-100 text-gray-700 mr-2 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class=" group w-full h-[30px] flex-shrink-0 bg-gray-50 border rounded flex items-center justify-between text-center p-2">
+                            <div class="flex gap-2 ml-2 items-center">
+                                <div class="text-3xl text-gray-600 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="size-6">
+                                        <path
+                                            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
+                                        <path
+                                            d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                                    </svg>
+
+                                </div>
+                                <div class="text-xs w-full line-clamp-4 break-words">
+                                    Document Ni Jose Rizal.docx
+                                </div>
+                            </div>
+                            <button
+                                class=" bg-gray-100 text-gray-700 mr-2 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-1 pb-3">
+
+                        {{-- Image --}}
+                        <div class="relative group ">
+                            <div class="aspect-square rounded w-auto overflow-hidden relative">
+                                <img src="https://picsum.photos/500/100" alt="Example Image"
+                                    class="h-full aspect-square object-cover" />
+                            </div>
+                            <button
+                                class="absolute top-1 right-1 bg-gray-100 text-gray-700 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        {{-- Image --}}
+                        <div class="relative group">
+                            <div class="aspect-square rounded w-auto overflow-hidden relative">
+                                <img src="https://picsum.photos/500/500" alt="Example Image"
+                                    class="h-full aspect-square object-cover" />
+                            </div>
+
+                            <button
+                                class="absolute top-1 right-1 bg-gray-100 text-gray-700 rounded-full w-6 h-6 text-xs hidden group-hover:flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {{-- position in bottom-0 --}}
+                <div class="">
+                    <div class="text-xs text-red-700">Error: Your files can't be uploaded.</div>
+
+                    <div class=" border border-gray-300 shadow-sm p-2 rounded-md mt-3">
+                        <div class="flex justify-between items-center text-xl mx-2">
+                            <p class="text-base text-gray-600">Add to your post</p>
+                            <div class="flex gap-2">
+                                <button class="bg-gray-200 px-2 h-10 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </button>
+                                <button class="bg-gray-200 px-2 h-10 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-1 text-xs text-gray-600">Note: All posts must be approved by the admin before they
+                        become public.</div>
+                    <button
+                        class="w-full mt-6 bg-gray-800 text-gray-200 cursor-not-allowed rounded-md py-2 font-semibold">Post
+                    </button>
+                </div>
+            </div>
         </div>
     </x-slot:modal>
 
