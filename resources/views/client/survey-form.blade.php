@@ -1,5 +1,5 @@
 <x-layout.client-layout>
-    <div class="flex flex-col lg:flex-row min-h-screen max-w-screen-xl gap-4 lg:mx-auto ">
+    <div class="flex flex-col lg:flex-row min-h-screen max-w-screen-xl gap-2 lg:mx-auto ">
 
         <div
             class="w-full lg:w-1/4   bg-white  dark:bg-[#252728]  shadow-lg lg:max-w-[350px] flex p-8 lg:pt-44 items-center justify-start flex-col text-lg border-b dark:border-[#3A3C3D] lg:border-r-[1px] lg:border-b-0 border-gray-200 lg:fixed lg:h-screen top-0 ">
@@ -14,8 +14,6 @@
                 © 2025 BTECH. All rights reserved.
             </div>
         </div>
-
-
 
         <form id="questionnaireForm" class="flex flex-col justify-start items-center w-full lg:w-3/4 lg:ml-[25%]">
             <div class="flex flex-col gap-2 mx-5 items-center">
@@ -182,9 +180,6 @@
                     <!-- Error message -->
                     <div class="text-xs mt-2 text-red-600 dark:text-red-400">This question is required.</div>
                 </div>
-
-
-
 
                 <div
                     class="flex items-center w-full bg-white dark:bg-[#252728] shadow-md max-w-xl  mb-6 p-6 py-3 rounded-b-lg justify-between border-t border-gray-300 dark:border-gray-600">
