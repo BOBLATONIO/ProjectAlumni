@@ -7,31 +7,31 @@
                 Welcome to <span class="text-[#2655ff] font-semibold">BtechLink!</span>
             </div>
             <div class="w-16 h-1 bg-[#2655ff] rounded-full mb-4"></div>
-            <p class="text-sm text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+            <div class="text-sm text-gray-600 dark:text-gray-300 text-center leading-relaxed">
                 Your feedback is invaluable in helping us grow and improve. We appreciate your time and insights!
-            </p>
-            <p class="block text-center text-[10px] text-gray-400 mt-10">
+            </div>
+            <div class="block text-center text-[10px] text-gray-400 mt-10">
                 © 2025 BTECH. All rights reserved.
-            </p>
+            </div>
         </div>
 
 
 
-        <form id="questionnaireForm" class="flex flex-col justify-center items-center w-full lg:w-3/4 lg:ml-[25%]">
+        <form id="questionnaireForm" class="flex flex-col justify-start items-center w-full lg:w-3/4 lg:ml-[25%]">
             <div class="flex flex-col gap-2 mx-5 items-center">
                 <div
-                    class="bg-white dark:bg-[#252728] shadow-lg py-6 mt-6 w-full md:w-[600px] lg:w-[700px] max-w-[800px] rounded-t-lg border-t-8 border-[#273461] border-b border-b-gray-300 dark:border-b-gray-600">
+                    class="bg-white dark:bg-[#252728] shadow-lg py-6 mt-6 w-full max-w-xl border-b border-b-gray-300 dark:border-b-gray-600">
                     <div class="text-3xl font-semibold text-gray-900 dark:text-gray-200 px-6">TRACER STUDY</div>
                     <div class="w-full px-6 mt-3">
-                        <p class="text-sm text-gray-700 dark:text-gray-400 leading-relaxed">
-                            <span class="font-bold ">Pahayag ng Pahintulot:</span>
+                        <div class="text-sm text-gray-700 dark:text-gray-400 leading-relaxed">
+                            Pahayag ng Pahintulot:
                             Sa pamamagitan ng dokumentong ito, ako ay nagpapahintulot sa Dalubhasaang Politekniko ng
                             Lungsod ng Baliwag na
                             mangolekta, magproseso, at gumamit ng mga datos na nakasaad dito para sa iba pang layuning
                             pang-akademiko.
                             Nauunawaan ko na ang aking personal na impormasyon ay pinoprotektahan ng RA 10173, Batas ng
                             Privacy ng Datos ng 2012.
-                        </p>
+                        </div>
                         <div class="mt-4 flex items-center gap-2">
                             <input id="concent" type="checkbox" value=""
                                 class="w-3.5 h-3.5 text-blue-600 bg-gray-100 dark:bg-[#252728] border-gray-300 rounded-sm dark:border-gray-600">
@@ -40,37 +40,89 @@
                     </div>
                 </div>
 
+                {{-- dropdown --}}
+                <div id="" class="question w-full max-w-xl bg-white dark:bg-[#252728] shadow-sm p-4">
+                    <p class="text-base font-medium text-gray-900 dark:text-gray-200 mb-4">
+                        Dropdown<span class="text-red-600 text-lg ml-1">*</span>
+                    </p>
+                    <div class="mt-2 text-sm">
+                        <select name=""
+                            class="w-full p-2  border border-gray-300 dark:border-gray-600 focus:outline-none rounded-md text-gray-900 dark:text-gray-400 dark:bg-[#252728]">
+                            <option class="text-sm" value="" disabled selected>Piliin ang iyong sagot.</option>
+                            <option class="text-sm" value="">Option 1</option>
+                            <option class="text-sm" value="">Option 2</option>
+                        </select>
+                        <div class="text-xs mt-1 text-red-600 dark:text-red-400">error</div>
+                    </div>
+                </div>
 
+                {{-- multiple choice --}}
+                <div id="question1"
+                    class="w-full max-w-xl bg-white dark:bg-[#252728] p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
+                    <p class="text-base font-medium text-gray-900 dark:text-gray-200 mb-4">
+                        Multiple Choice<span class="text-red-600 text-lg ml-1">*</span>
+                    </p>
+                    <div class="space-y-4 text-gray-800 dark:text-gray-300">
 
-                {{-- Select --}}
-                <x-client-components.client-question-select name="question 1" question="What is HTML?" :options="[
-                    'Bachelor of Elementary Education',
-                    'Bachelor of Secondary Education major in English',
-                    'Bachelor of Science in Hospitality Management',
-                    'Bachelor of Science in Tourism Management',
-                    'Bachelor of Science in Accountancy'
-                    ]" errmsg="this is how to insert error in this question." />
+                        <label class="flex items-start gap-3">
+                            <input type="radio" name="question1" value="option1"
+                                class="mt-1 shrink-0 w-5 h-5 text-purple-600 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
+                            <span class="text-sm leading-6">Option 1</span>
+                        </label>
+                        <label class="flex items-center gap-3">
+                            <input type="radio" name="question1" value="option2"
+                                class="shrink-0 w-5 h-5 text-purple-600 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
+                            <span class="text-sm">Option 2</span>
+                        </label>
+                        <label class="flex items-center gap-3">
+                            <input type="radio" name="question1" value="option3"
+                                class="shrink-0 w-5 h-5 text-purple-600 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
+                            <span class="text-sm">Option 3</span>
+                        </label>
+                    </div>
 
-                {{-- Multiple Choice --}}
-                <x-client-components.client-question-multiple-choice question="Piliin ang tamang sagot:"
-                    name="mutiplechoice1" :choices="[
-                    'Choice 1',
-                    'Choice 2',
-                    'Choice 3',
-                    'Choice 4'
-                    ]" errmsg="this is how to insert error in this question." />
+                    <!-- Error message -->
+                    <div class="text-xs mt-2 text-red-600 dark:text-red-400">This question is required.</div>
+                </div>
 
-                {{-- Short Answer --}}
-                <x-client-components.client-question-textinput question="Type: InputText(short)" name="questionNumber"
-                    type="number" {{-- type text, number, etc --}}
-                    errmsg="this is how to insert error in this question." />
+                {{-- Multiple Choice with other input --}}
+                <div id="question1"
+                    class="w-full max-w-xl bg-white dark:bg-[#252728] p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
+                    <p class="text-base font-medium text-gray-900 dark:text-gray-200 mb-4">
+                        Multiple Choice w Other INPUT<span class="text-red-600 text-lg ml-1">*</span>
+                    </p>
+                    <div class="space-y-4 text-gray-800 dark:text-gray-300">
+                        <label class="flex items-start gap-3">
+                            <input type="radio" name="question1" value="option1"
+                                class="mt-1 shrink-0 w-5 h-5 text-purple-600 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
+                            <span class="text-sm leading-6">Option 1</span>
+                        </label>
+                        <label class="flex items-center gap-3">
+                            <input type="radio" name="question1" value="option2"
+                                class="shrink-0 w-5 h-5 text-purple-600 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
+                            <span class="text-sm">Option 2</span>
+                        </label>
+                        <label class="flex items-center gap-3">
+                            <input type="radio" name="question1" value="option3"
+                                class="shrink-0 w-5 h-5 text-purple-600 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
+                            <span class="text-sm">Option 3</span>
+                        </label>
 
-                {{-- Long Answer --}}
-                <x-client-components.client-question-textarea question="Type: TextArea(long)" name="QuestionNumber"
-                    errmsg="this is how to insert error in this question." />
+                        <label class="flex items-center gap-3">
+                            <input type="radio" name="question1" value="other"
+                                class="shrink-0 w-5 h-5 text-purple-600 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
+                            <span class="text-sm">Other:</span>
+                            <input type="text" name="question1_other" placeholder=""
+                                class="border-b border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-600 text-sm flex-1 bg-transparent py-1 px-1">
+                        </label>
+                    </div>
+
+                    <!-- Error message -->
+                    <div class="text-xs mt-2 text-red-600 dark:text-red-400">This question is required.</div>
+                </div>
 
                 <div
-                    class="flex items-center w-full bg-white dark:bg-[#252728] shadow-md md:w-[600px] lg:w-[700px] mb-6 p-6 py-3 rounded-b-lg justify-between border-t border-gray-300 dark:border-gray-600">
+                    class="flex items-center w-full bg-white dark:bg-[#252728] shadow-md max-w-xl  mb-6 p-6 py-3 rounded-b-lg justify-between border-t border-gray-300 dark:border-gray-600">
                     <div class="flex flex-col">
                         <span class="text-sm text-gray-700 dark:text-gray-300 font-medium ">Ensure all fields are
                             correctly filled before submission.</span>

@@ -14,7 +14,7 @@ $(document).ready(function () {
             let questionText = $(this).find("p").first().text(); // Get question
             let selectedOptions = [];
 
-            // dropdown
+            // dropdown/select == OK
             let selectInput = $(this).find("select");
             if (selectInput.length > 0) {
                 let selectedValue = selectInput.val();

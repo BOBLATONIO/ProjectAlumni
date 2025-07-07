@@ -234,10 +234,10 @@
                             class="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-gray-200 dark:hover:dark:hover:bg-[#3B3D3E] transition-all rounded-md">
                             <a class="block w-full" href="{{ route('tracer-study') }}">Tracer Study</a>
                         </li>
-                        <li
+                        {{-- <li
                             class="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-gray-200 dark:hover:dark:hover:bg-[#3B3D3E] transition-all rounded-md">
                             <a class="block w-full" href="{{ route('announcement') }}">Announcement</a>
-                        </li>
+                        </li> --}}
                         <li
                             class="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-gray-200 dark:hover:dark:hover:bg-[#3B3D3E] transition-all rounded-md">
                             <a class="block w-full" href="{{ route('network') }}">Network</a>
