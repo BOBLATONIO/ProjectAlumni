@@ -38,20 +38,24 @@
                     </div>
                 </div>
 
-                {{-- dropdown --}}
-                <div id="" class="question w-full max-w-xl bg-white dark:bg-[#252728] shadow-sm p-4">
-                    <p class="text-base font-medium text-gray-900 dark:text-gray-200 mb-4">
-                        Dropdown<span class="text-red-600 text-lg ml-1">*</span>
+                {{-- Dropdown --}}
+                <div id="questionDropdown"
+                    class="w-full max-w-xl bg-white dark:bg-[#252728] p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
+
+                    <p class="text-base font-medium text-gray-900 dark:text-gray-200 mb-2">
+                        Dropdown Question<span class="text-red-600 text-lg ml-1">*</span>
                     </p>
-                    <div class="mt-2 text-sm">
-                        <select name=""
-                            class="w-full p-2  border border-gray-300 dark:border-gray-600 focus:outline-none rounded-md text-gray-900 dark:text-gray-400 dark:bg-[#252728]">
-                            <option class="text-sm" value="" disabled selected>Piliin ang iyong sagot.</option>
-                            <option class="text-sm" value="">Option 1</option>
-                            <option class="text-sm" value="">Option 2</option>
-                        </select>
-                        <div class="text-xs mt-1 text-red-600 dark:text-red-400">error</div>
-                    </div>
+
+                    <select name="dropdown_answer"
+                        class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#252728] text-gray-900 dark:text-gray-200  focus:outline-none">
+                        <option value="" disabled selected>Piliin ang iyong sagot.</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+
+                    <!-- Error message -->
+                    <div class="text-xs mt-2 text-red-600 dark:text-red-400 hidden">This question is required.</div>
                 </div>
 
                 {{-- multiple choice --}}
@@ -169,8 +173,7 @@
                 <div id="question4"
                     class="w-full max-w-xl bg-white dark:bg-[#252728] p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
                     <p class="text-base font-medium text-gray-900 dark:text-gray-200 mb-4">
-                        Long Answer Long Answer Long Answer Long Answer Long Answer Long Answer Long Answer Long
-                        Answer<span class="text-red-600 text-lg ml-1">*</span>
+                        Long Answer<span class="text-red-600 text-lg ml-1">*</span>
                     </p>
                     <div class="text-gray-800 dark:text-gray-300">
                         <textarea name="question4" rows="5"
@@ -180,6 +183,56 @@
                     <!-- Error message -->
                     <div class="text-xs mt-2 text-red-600 dark:text-red-400">This question is required.</div>
                 </div>
+
+                {{-- file upload with description --}}
+                <div id="question5"
+                    class="w-full max-w-xl bg-white dark:bg-[#252728] p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
+
+                    <p class="text-base font-medium text-gray-900 dark:text-gray-200 mb-2">
+                        File Upload<span class="text-red-600 text-lg ml-1">*</span>
+                    </p>
+
+                    <p class="text-xs mt-1 text-gray-600 dark:text-gray-400 mb-1">
+                        Upload your file in PDF format. Max file size: 2MB.
+                    </p>
+                    <div class="text-gray-800 dark:text-gray-300">
+                        <input type="file" name="question5" accept=".htm"
+                            class="w-full text-sm text-gray-700 dark:text-gray-200
+                   file:mr-4 file:py-2 file:px-4 
+                   file:rounded-md file:border-0 file:text-sm file:font-semibold
+                   file:bg-gray-200 file:text-blue-700
+                   hover:file:bg-purple-100
+                   dark:file:bg-[#252728] dark:file:border dark:file:border-solid dark:file:border-gray-600  dark:file:text-gray-200  file:cursor-pointer">
+                    </div>
+
+                    <!-- Error message -->
+                    <div class="text-xs mt-2 text-red-600 dark:text-red-400">This question is required.</div>
+                </div>
+
+                {{-- Section Title with description --}}
+                <div
+                    class="w-full max-w-xl bg-white dark:bg-[#252728] p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
+                    <p class="text-base font-medium text-gray-900 dark:text-gray-200">
+                        Section Title with description
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        Description..
+                    </p>
+                </div>
+
+                {{-- Section Title --}}
+                <div
+                    class="w-full max-w-xl bg-white dark:bg-[#252728] p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
+                    <p class="text-base font-medium text-gray-900 dark:text-gray-200">
+                        Section Title
+                    </p>
+                </div>
+
+
+
+
+
+
 
                 <div
                     class="flex items-center w-full bg-white dark:bg-[#252728] shadow-md max-w-xl  mb-6 p-6 py-3 rounded-b-lg justify-between border-t border-gray-300 dark:border-gray-600">
