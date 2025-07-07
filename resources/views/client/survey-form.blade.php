@@ -121,6 +121,71 @@
                     <div class="text-xs mt-2 text-red-600 dark:text-red-400">This question is required.</div>
                 </div>
 
+                {{-- multiple answer (checkbox) --}}
+                <div id="question2"
+                    class="w-full max-w-xl bg-white dark:bg-[#252728] p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
+
+                    <p class="text-base font-medium text-gray-900 dark:text-gray-200 mb-4">
+                        Multiple Answer<span class="text-red-600 text-lg ml-1">*</span>
+                    </p>
+
+                    <div class="space-y-4 text-gray-800 dark:text-gray-300">
+                        <label class="flex items-start gap-3">
+                            <input type="checkbox" name="question2[]" value="option1"
+                                class="mt-1 shrink-0 w-5 h-5 text-purple-600 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
+                            <span class="text-sm leading-6">Option 1</span>
+                        </label>
+                        <label class="flex items-center gap-3">
+                            <input type="checkbox" name="question2[]" value="option2"
+                                class="shrink-0 w-5 h-5 text-purple-600 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
+                            <span class="text-sm">Option 2</span>
+                        </label>
+                        <label class="flex items-center gap-3">
+                            <input type="checkbox" name="question2[]" value="option3"
+                                class="shrink-0 w-5 h-5 text-purple-600 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600">
+                            <span class="text-sm">Option 3</span>
+                        </label>
+                    </div>
+
+                    <!-- Error message -->
+                    <div class="text-xs mt-2 text-red-600 dark:text-red-400">This question is required.</div>
+                </div>
+
+                {{-- short text input --}}
+                <div id="question3"
+                    class="w-full max-w-xl bg-white dark:bg-[#252728] p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
+                    <p class="text-base font-medium text-gray-900 dark:text-gray-200 mb-4">
+                        Short Answer<span class="text-red-600 text-lg ml-1">*</span>
+                    </p>
+                    <div class="text-gray-800 dark:text-gray-300">
+                        <input type="text" name="question3"
+                            class="w-full border-b border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-600 text-sm bg-transparent py-1 px-1 text-gray-900 dark:text-gray-100"
+                            placeholder="Type your answer here">
+                    </div>
+
+                    <!-- Error message -->
+                    <div class="text-xs mt-2 text-red-600 dark:text-red-400">This question is required.</div>
+                </div>
+
+                {{-- long answer input --}}
+                <div id="question4"
+                    class="w-full max-w-xl bg-white dark:bg-[#252728] p-4 rounded-md shadow-sm border border-gray-200 dark:border-gray-700">
+                    <p class="text-base font-medium text-gray-900 dark:text-gray-200 mb-4">
+                        Long Answer Long Answer Long Answer Long Answer Long Answer Long Answer Long Answer Long
+                        Answer<span class="text-red-600 text-lg ml-1">*</span>
+                    </p>
+                    <div class="text-gray-800 dark:text-gray-300">
+                        <textarea name="question4" rows="5"
+                            class="w-full border-b border-gray-300 dark:border-gray-600 focus:outline-none focus:border-purple-600 text-sm bg-transparent py-1 px-1 text-gray-900 dark:text-gray-100 resize-none"
+                            placeholder="Write your answer here..."></textarea>
+                    </div>
+                    <!-- Error message -->
+                    <div class="text-xs mt-2 text-red-600 dark:text-red-400">This question is required.</div>
+                </div>
+
+
+
+
                 <div
                     class="flex items-center w-full bg-white dark:bg-[#252728] shadow-md max-w-xl  mb-6 p-6 py-3 rounded-b-lg justify-between border-t border-gray-300 dark:border-gray-600">
                     <div class="flex flex-col">
