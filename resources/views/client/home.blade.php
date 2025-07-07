@@ -1,7 +1,8 @@
 <x-layout.client-layout>
-    <div class="flex min-h-screen">
+    <div class="max-w-screen-xl mx-auto flex min-h-screen relative">
         <!-- Sidebar -->
-        <aside class="flex-1  bg-white pt-4 w-72 shadow-md overflow-y-auto h-[calc(100vh-64px)] fixed">
+        <aside
+            class="hidden lg:block bg-white pt-4 w-72 shadow-md overflow-y-auto h-[calc(100vh-64px)] fixed left-0 top-16">
             <div class=" relative h-full  flex flex-col justify-between">
                 <div class="">
                     <div class="flex flex-col text-md mt-2">
@@ -80,7 +81,7 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-4 space-y-4 mx-72 overflow-y-auto h-[calc(100vh-64px)] fixed">
+        <main class="flex-1 p-4 space-y-4 lg:ml-72 lg:mr-[288px] overflow-y-auto h-[calc(100vh-64px)] ml-0 mr-0">
             {{-- Post Box --}}
             <div class="w-full flex items-center bg-white rounded-md shadow p-4">
                 <img src="{{ asset('assets/images/Profile.jpeg') }}" alt="Profile"
@@ -91,14 +92,14 @@
                         What's on your mind?
                     </button>
 
-                    <button class="bg-gray-200 px-2 h-10 rounded-full">
+                    <button class="bg-gray-200 px-2 h-10 hidden sm:block rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6 text-gray-600">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                         </svg>
                     </button>
-                    <button class="bg-gray-200 px-2 h-10 rounded-full">
+                    <button class="bg-gray-200 px-2 h-10 hidden sm:block  rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6 text-gray-600">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -118,7 +119,9 @@
                         class="h-10 min-w-10 rounded-full object-cover mr-2">
                     <div class="">
                         <div class="uppercase text-md text-gray-900">Bobson Latonio</div>
-                        <p class="text-sm -mt-1 text-gray-600">20 min. ago</p>
+                        <div class="">
+                            <div class="text-sm -mt-1 text-red-600">for approval</div>
+                        </div>
                     </div>
                 </div>
                 <p class="mb-4 text-gray-800 text-sm">LIBRENG REVIEW PARA SA CIVIL SERVICE EXAMINATION handog ng
@@ -373,7 +376,7 @@
                     ngayong Agosto 11, 2024? Handa ka na bang harapin ang hamon ng pagiging isang
                     lingkod-bayan?</p>
 
-                <div class="grid grid-cols-3 gap-2">
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
@@ -422,7 +425,7 @@
                     ngayong Agosto 11, 2024? Handa ka na bang harapin ang hamon ng pagiging isang
                     lingkod-bayan?</p>
 
-                <div class="grid grid-cols-4 gap-2">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
@@ -471,7 +474,7 @@
                     ngayong Agosto 11, 2024? Handa ka na bang harapin ang hamon ng pagiging isang
                     lingkod-bayan?</p>
 
-                <div class="grid grid-cols-4 gap-2">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
                     <img src="https://picsum.photos/500/500" class="rounded" />
@@ -511,7 +514,7 @@
         </main>
 
         <!-- Right Sidebar -->
-        <aside class="flex-1 w-[288px] h-[calc(100vh-64px)] fixed right-0 bottom-0">
+        <aside class="hidden lg:block w-[288px] h-[calc(100vh-64px)] fixed right-0 top-16">
             <div class="w-full h-full overflow-y-auto pr-4 pb-4 space-y-4">
                 <div class="bg-white w-full rounded shadow mt-4  ">
                     <div class="flex mb-2 pt-4 px-5 items-center justify-between">
@@ -760,9 +763,7 @@
 
         </div>
 
-
-
-        <div class="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
+        <div class="fixed hidden inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
             <div class="bg-white text-gray-900 h-full sm:h-auto w-full max-w-lg rounded-lg shadow-lg p-4">
                 <div class="flex justify-between items-center border-b pb-2">
                     <h2 class="text-lg font-semibold">Create post</h2>
