@@ -2,14 +2,14 @@
     <div class="max-w-screen-xl mx-auto flex min-h-screen relative">
         <!--Sidebar-->
         <aside
-            class="hidden lg:block bg-white pt-4 w-72 shadow-md overflow-y-auto h-[calc(100vh-64px)] fixed left-0 top-16">
+            class="hidden lg:block bg-white dark:bg-[#252728] pt-4 w-72 shadow-md overflow-y-auto h-[calc(100vh-64px)] dark:border-r dark:border-gray-700 fixed left-0 top-16">
             <div class=" relative h-full  flex flex-col justify-between">
                 <div class="">
                     <div class="flex flex-col text-md mt-2">
                         <a href="{{ route('your-post') }}"
-                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E]">
+                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100  dark:text-white dark:hover:bg-[#3B3D3E]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="h-8 min-w-8 rounded-full object-cover text-gray-800 dark:text-gray-300 dark:hover:text-white  cursor-pointer">
+                                class="h-8 min-w-8 rounded-full object-cover text-[#338A46] dark:hover:text-white  cursor-pointer">
                                 <path fill-rule="evenodd"
                                     d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
                                     clip-rule="evenodd" />
@@ -17,9 +17,9 @@
                             <div class="block  w-full">Your Post</div>
                         </a>
                         <a href="{{ route('alumni-id') }}"
-                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E]">
+                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-white dark:hover:bg-[#3B3D3E]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="h-8 min-w-8 rounded-full object-cover text-gray-800 dark:text-gray-300 dark:hover:text-white  cursor-pointer">
+                                class="h-8 min-w-8 rounded-full object-cover text-[#3f5fb7] dark:hover:text-white  cursor-pointer">
                                 <path fill-rule="evenodd"
                                     d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z"
                                     clip-rule="evenodd" />
@@ -27,9 +27,9 @@
                             <div class="block w-full">My Alumni ID</div>
                         </a>
                         <a href="{{ route('donate-us') }}"
-                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E]">
+                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-white dark:hover:bg-[#3B3D3E]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="h-8 min-w-8 rounded-full object-cover text-gray-800  dark:text-gray-300 dark:hover:text-white  cursor-pointer">
+                                class="h-8 min-w-8 rounded-full object-cover text-[#ED4A2E] dark:hover:text-white  cursor-pointer">
                                 <path
                                     d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
                             </svg>
@@ -37,9 +37,9 @@
                             <div class="block  w-full">Donate Us</div>
                         </a>
                         <a href="{{ route('help-center') }}"
-                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E]">
+                            class="flex items-center px-6 h-11 relative gap-2 cursor-pointer hover:bg-gray-100 dark:text-white dark:hover:bg-[#3B3D3E]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="h-8 min-w-8 rounded-full object-cover text-gray-800 dark:text-gray-300 dark:hover:text-white  cursor-pointer">
+                                class="h-8 min-w-8 rounded-full object-cover text-[#FCB731] dark:hover:text-white  cursor-pointer">
                                 <path fill-rule="evenodd"
                                     d="M4.804 21.644A6.707 6.707 0 0 0 6 21.75a6.721 6.721 0 0 0 3.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 0 1-.814 1.686.75.75 0 0 0 .44 1.223ZM8.25 10.875a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25ZM10.875 12a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm4.875-1.125a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z"
                                     clip-rule="evenodd" />
@@ -53,10 +53,11 @@
                     </div>
 
                     <div>
-                        <h2 class="px-6 text-sm font-semibold mt-6 mb-3">Upcoming Events</h2>
+                        <h2 class="px-6 text-sm font-semibold mt-6 mb-3 dark:text-gray-400">Upcoming Events</h2>
                         <div class="mx-3 flex flex-col">
                             {{-- open modal post --}}
-                            <a href="" class="px-3 rounded-md hover:bg-gray-100 py-2 flex items-center gap-2">
+                            <a href=""
+                                class="px-3 rounded-md hover:bg-gray-100 dark:hover:bg-[#3B3D3E] py-2 flex items-center gap-2">
                                 <img class="h-11 max-w-11  object-cover border border-gray-500 dark:text-gray-300 dark:hover:text-white shadow-sm cursor-pointer"
                                     src="{{ asset('assets/images/SampleAnnounImage.jpg') }}" alt="Profile Picture">
                                 <div class="text-sm max-900:hidden cursor-pointer">
@@ -73,7 +74,7 @@
                     </div>
                 </div>
 
-                <div class="px-6 text-xs text-gray-500 mt-8 pb-4">
+                <div class="px-6 text-[11px] text-gray-500 dark:text-gray-400 text-center mt-8 pb-4">
                     © 2025 BTECH. All rights reserved.
                 </div>
             </div>
@@ -81,34 +82,36 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-4 space-y-4 lg:ml-72 lg:mr-[288px] overflow-y-auto h-[calc(100vh-64px)] ml-0 mr-0">
+        <main class="flex-1 p-4 space-y-4 ml-0 mr-0 lg:mx-[300px] lg:px-[70px] overflow-y-auto h-[calc(100vh-64px)] ">
             {{-- Post Box --}}
-            <div class="w-full flex items-center bg-white rounded-md shadow p-4">
+            <div
+                class="w-full flex items-center bg-white rounded-md shadow p-4 dark:bg-[#252728] dark:border dark:border-gray-700">
                 <img src="{{ asset('assets/images/Profile.jpeg') }}" alt="Profile"
-                    class="h-10 min-w-10 rounded-full object-cover mr-2">
+                    class="h-10 min-w-10 rounded-full object-cover mr-2 dark:border dark:border-gray-500">
 
-                <div class="flex items-center w-full space-x-1">
-                    <button class="flex-grow h-10 bg-gray-100 rounded-full px-4 outline-none text-start text-gray-400">
+                <div class="flex items-center w-full space-x-1 ">
+                    <button
+                        class="flex-grow h-10 bg-gray-100 rounded-full px-4 outline-none text-start text-gray-500 dark:text-gray-300 dark:bg-[#333334]">
                         What's on your mind?
                     </button>
 
-                    <button class="bg-gray-200 px-2 h-10 hidden sm:block rounded-full">
+                    <button class="bg-gray-200 px-2 h-10 hidden sm:block rounded-full dark:bg-[#333334]">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6 text-gray-600">
+                            stroke="currentColor" class="size-6 text-gray-500 dark:text-gray-300">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                         </svg>
                     </button>
-                    <button class="bg-gray-200 px-2 h-10 hidden sm:block  rounded-full">
+                    <button class="bg-gray-200 px-2 h-10 hidden sm:block  rounded-full dark:bg-[#333334]">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6 text-gray-600">
+                            stroke="currentColor" class="size-6 text-gray-500 dark:text-gray-300">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
                         </svg>
 
                     </button>
                     <button
-                        class="bg-gray-700 text-gray-100 px-6 border-none h-10 rounded-full font-light">Post</button>
+                        class=" text-gray-100 px-6 border-none h-10 rounded-full font-light bg-[#338A46]">Post</button>
                 </div>
             </div>
 
@@ -516,9 +519,9 @@
         <!-- Right Sidebar -->
         <aside class="hidden lg:block w-[288px] h-[calc(100vh-64px)] fixed right-0 top-16">
             <div class="w-full h-full overflow-y-auto pr-4 pb-4 space-y-4">
-                <div class="bg-white w-full rounded shadow mt-4  ">
+                <div class="bg-white dark:bg-[#252728] w-full rounded shadow mt-4  dark:border dark:border-gray-700">
                     <div class="flex mb-2 pt-4 px-5 items-center justify-between">
-                        <div class=" text-sm font-medium">Network</div>
+                        <div class=" text-sm font-medium dark:text-gray-400">Network</div>
                         <button class="text-sm hover:underline text-blue-600">See all</button>
 
                     </div>
@@ -526,7 +529,7 @@
                         <li class="flex items-center  py-2 px-3 mx-2 gap-1.5">
                             <img class="h-9 min-w-9 rounded-full object-cover border border-gray-500 dark:text-gray-300 dark:hover:text-white shadow-sm cursor-pointer"
                                 src="{{ asset('assets/images/Profile.jpeg') }}" alt="Profile Picture">
-                            <div class="font-semibold truncate">JUAN DELA CRUZ</div>
+                            <div class="font-medium truncate dark:text-white">JUAN DELA CRUZ</div>
                         </li>
 
 
@@ -534,9 +537,9 @@
 
                     </ul>
                 </div>
-                <div class="bg-white w-full rounded shadow mt-2  ">
+                <div class="bg-white dark:bg-[#252728] w-full rounded shadow mt-2 dark:border dark:border-gray-700 ">
                     <div class="flex mb-2 pt-4 px-5 items-center justify-between">
-                        <div class=" text-sm font-medium">Officers</div>
+                        <div class=" text-sm font-medium dark:text-gray-400">Officers</div>
                         <button class="text-sm hover:underline text-blue-600">See all</button>
                     </div>
                     <ul class="text-sm text-gray-700 pb-2 flex flex-col">
@@ -544,8 +547,8 @@
                             <img class="h-9 min-w-9 rounded-full object-cover border border-gray-500 dark:text-gray-300 dark:hover:text-white shadow-sm cursor-pointer"
                                 src="{{ asset('assets/images/Profile.jpeg') }}" alt="Profile Picture">
                             <div class="flex flex-col">
-                                <div class="font-semibold truncate">JUAN DELA CRUZ</div>
-                                <div class="-mt-1 text-sm text-gray-700">President</div>
+                                <div class="font-medium truncate dark:text-white">JUAN DELA CRUZ</div>
+                                <div class="-mt-1 text-xs text-gray-700 dark:text-gray-200">President</div>
                             </div>
                         </li>
 
