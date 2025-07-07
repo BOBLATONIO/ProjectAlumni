@@ -1,6 +1,6 @@
 <x-layout.client-layout>
     <div class="max-w-screen-xl mx-auto flex min-h-screen relative">
-        <!-- Sidebar -->
+        <!--Sidebar-->
         <aside
             class="hidden lg:block bg-white pt-4 w-72 shadow-md overflow-y-auto h-[calc(100vh-64px)] fixed left-0 top-16">
             <div class=" relative h-full  flex flex-col justify-between">
