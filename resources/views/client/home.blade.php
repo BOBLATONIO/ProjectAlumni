@@ -82,7 +82,7 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 p-4 space-y-4 ml-0 mr-0 lg:mx-[300px] lg:px-[70px] overflow-y-auto h-[calc(100vh-64px)] ">
+        <main class="flex-1 p-4 space-y-4 ml-0 mr-0 lg:mx-[300px] lg:px-[70px] overflow-y-auto h-[calc(100vh-64px)]">
             {{-- Post Box --}}
             <div
                 class="w-full flex items-center bg-white rounded-md shadow p-4 dark:bg-[#252728] dark:border dark:border-gray-700">
@@ -521,7 +521,7 @@
             <div class="w-full h-full overflow-y-auto pr-4 pb-4 space-y-4">
                 <div class="bg-white dark:bg-[#252728] w-full rounded shadow mt-4  dark:border dark:border-gray-700">
                     <div class="flex mb-2 pt-4 px-5 items-center justify-between">
-                        <div class=" text-sm font-medium dark:text-gray-400">Network</div>
+                        <div class=" text-sm font-semibold dark:text-gray-400">Network</div>
                         <button class="text-sm hover:underline text-blue-600">See all</button>
 
                     </div>
@@ -539,7 +539,7 @@
                 </div>
                 <div class="bg-white dark:bg-[#252728] w-full rounded shadow mt-2 dark:border dark:border-gray-700 ">
                     <div class="flex mb-2 pt-4 px-5 items-center justify-between">
-                        <div class=" text-sm font-medium dark:text-gray-400">Officers</div>
+                        <div class=" text-sm font-semibold dark:text-gray-400">Officers</div>
                         <button class="text-sm hover:underline text-blue-600">See all</button>
                     </div>
                     <ul class="text-sm text-gray-700 pb-2 flex flex-col">

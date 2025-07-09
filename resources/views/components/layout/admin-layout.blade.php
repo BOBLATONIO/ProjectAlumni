@@ -32,18 +32,7 @@
         <div class="flex-1 h-[calc(100vh-4rem)] overflow-y-auto  bg-gray-100 dark:bg-[#1c1c1d]">
             <div class="p-4 py-0 text-gray-800 ">
                 <div class=" px-4">
-                    <div class="flex items-center justify-between py-3 -mx-8 px-8 border-b bg-gray-50 ">
-                        <div>
-                            <h3 class="text-gray-800 text-lg font-semibold">
-                                {{ $pageTitle }}
-                            </h3>
-                        </div>
-                        <div class="flex relative items-center text-sm gap-x-3">
-                            @isset($headerTab)
-                            {{ $headerTab }}
-                            @endisset
-                        </div>
-                    </div>
+                    <x-admin-components.admin-header-mng-content pageTitle='{{ $pageTitle }}'/>
                 </div>
                 {{ $slot }}
             </div>

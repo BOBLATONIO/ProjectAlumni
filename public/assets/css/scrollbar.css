@@ -1,6 +1,6 @@
 /* Scrollbar Width */
 .scrollbar::-webkit-scrollbar, .scrollbarMain::-webkit-scrollbar {
-    width: 8px;
+    width: 7px;
 }
 
 /* Thumb color */
