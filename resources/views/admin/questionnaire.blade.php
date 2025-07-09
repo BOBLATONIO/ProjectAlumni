@@ -1,4 +1,4 @@
-<x-layout.admin-layout pageTitle="Manage Questionnaire">
+<x-layout.admin-layout pageTitle="Manage Content">
     <x-slot:headerTab>
 
         <button

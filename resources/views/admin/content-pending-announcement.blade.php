@@ -2,11 +2,11 @@
 
     <div class="flex justify-center w-full gap-8 px-4">
         <div class="flex flex-col w-[100%]  items-center mt-4">
-            <x-admin-components.admin-announcement-header announcementHeader="Published Announcement"/>
+            <x-admin-components.admin-announcement-header announcementHeader="Pending Announcement" />
 
             <!-- 2 -->
-            <div>
-                <!-- {{-- Post = 4 --}}
+            <div class="">
+                {{-- Post = 4 --}}
                 <div class="bg-white max-w-full p-4 rounded shadow">
                     <div class="flex items-center mb-2">
                         <img src="{{ asset('assets/images/Profile.jpeg') }}" alt="Profile Picture"
@@ -31,29 +31,34 @@
                     </div>
 
                     <div class="w-full border-t  mt-4 border-gray-300"></div>
-                    <div class="flex items-center justify-between gap-2 text-gray-800">
-                        <button class="flex gap-1  w-1/2 justify-center hover:bg-gray-200 rounded-lg px-3 py-3 text-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
-                            </svg>
-                            <div>Like</div>
-                            <div class="font-medium">25</div>
-                        </button>
-                        <button class="flex gap-1 w-1/2 justify-center hover:bg-gray-200 rounded-lg px-3 py-3 text-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z" />
+                    <div class="flex items-center justify-between gap-2 ">
+                        <button
+                            class="flex gap-1 text-green-700  w-1/2 justify-center hover:bg-green-200 rounded-lg transition duration-300 px-3 py-3 text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-5">
+                                <path fill-rule="evenodd"
+                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                    clip-rule="evenodd" />
                             </svg>
 
-                            <div>Comment</div>
-                            <div class="font-medium">3</div>
+                            <div>Accept</div>
+                        </button>
+                        <button
+                            class="flex gap-1 w-1/2 text-red-700 justify-center hover:bg-red-200 rounded-lg transition duration-300 px-3 py-3 text-sm">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-5">
+                                <path fill-rule="evenodd"
+                                    d="M16.5 4.478v.227a48.816 48.816 0 0 1 3.878.512.75.75 0 1 1-.256 1.478l-.209-.035-1.005 13.07a3 3 0 0 1-2.991 2.77H8.084a3 3 0 0 1-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 0 1-.256-1.478A48.567 48.567 0 0 1 7.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 0 1 3.369 0c1.603.051 2.815 1.387 2.815 2.951Zm-6.136-1.452a51.196 51.196 0 0 1 3.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 0 0-6 0v-.113c0-.794.609-1.428 1.364-1.452Zm-.355 5.945a.75.75 0 1 0-1.5.058l.347 9a.75.75 0 1 0 1.499-.058l-.346-9Zm5.48.058a.75.75 0 1 0-1.498-.058l-.347 9a.75.75 0 0 0 1.5.058l.345-9Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                            <div>Delete</div>
                         </button>
                     </div>
                     <div class="w-full border-b border-gray-300"></div>
-                </div> -->
+                </div>
+
 
 
             </div>
@@ -66,10 +71,11 @@
         <div class="flex flex-col justify-center gap-1 px-5 w-[50%] h-full mt-5">
             <div class="w-full">
                 <div class="flex justify-between items-center text-gray-600 mb-2">
-                    <p class="text-md font-semibold ">Pending Post</p>
-                    <a href="{{ route('admin-pending-announcement') }}" class="mr-1 text-sm text-blue-600 hover:underline">
+                    <p class="text-md font-semibold ">Schedule Deletion</p>
+                    <a href="" class="mr-1 text-sm text-blue-600 hover:underline">
                         See all
                     </a>
+
                 </div>
                 <!-- deletion schedule container-->
                 <div class="flex flex-col gap-1">
@@ -80,7 +86,7 @@
                         <div class="flex-grow">
                             <div class="text-gray-500 line-clamp-1 uppercase">JUan dela cruz</div>
                             <div class="text-gray-900 font-medium line-clamp-2">body here</div>
-                            <div class="text-blue-500">5 mins ago</div>
+                            <div class="text-red-500">32 mins remaining</div>
                         </div>
                     </a>
                     <a href="" class="h-20 flex text-xs items-center border-gray-200 border p-2 rounded-lg">
@@ -90,7 +96,7 @@
                         <div class="flex-grow">
                             <div class="text-gray-500 line-clamp-1 uppercase">JUan dela cruz</div>
                             <div class="text-gray-900 font-medium line-clamp-2">body here</div>
-                            <div class="text-blue-500">1 hr ago</div>
+                            <div class="text-red-500">2 mins remaining</div>
                         </div>
                     </a>
 
@@ -100,8 +106,8 @@
             <div class="border-t-[1.5px] my-2 mt-3"></div>
             <div class="w-full">
                 <div class="flex justify-between text-gray-600 mb-2">
-                    <p class="text-md font-semibold ">Schedule Deletion</p>
-                    <a href="" class="mr-1 text-sm text-blue-600 hover:underline">
+                    <p class="text-md font-semibold ">Published post</p>
+                    <a href="{{ route('admin-announcement') }}" class="mr-1 text-sm text-blue-600 hover:underline">
                         See all
                     </a>
                 </div>
@@ -114,7 +120,7 @@
                         <div class="flex-grow">
                             <div class="text-gray-500 line-clamp-1 uppercase">JUan dela cruz</div>
                             <div class="text-gray-900 font-medium line-clamp-2">body here</div>
-                            <div class="text-red-500">55 mins remaining</div>
+                            <div class="text-blue-500">55 mins ago</div>
                         </div>
                     </a>
 

@@ -25,7 +25,7 @@
 
                 <div class="flex items-center gap-2 p-2 border-l h-16 pl-10 relative ">
                     <img class="h-11 min-w-11 rounded-full object-cover border border-gray-500 shadow-sm profile-picture cursor-pointer"
-                        src="/assets/images/Profile.jpeg" alt="Profile Picture">
+                        src="{{ $imageSrc }}" alt="Profile Picture">
 
                     <!--Start of dropdown button-->
                     <div class="profile-dropdown cursor-pointer">

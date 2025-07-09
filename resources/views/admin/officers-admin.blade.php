@@ -1,4 +1,4 @@
-<x-layout.admin-layout pageTitle="Manage Officers">
+<x-layout.admin-layout pageTitle="Manage Content">
     <x-slot:headerTab>
         <button
             class="flex items-center gap-2 text-sm px-5 py-1.5 rounded-sm bg-gray-800 border border-gray-800 text-gray-200">

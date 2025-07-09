@@ -88,6 +88,10 @@ Route::get('/admin/announcement', function () {
     return view('admin.content-announcement');
 })->name('admin-announcement');
 
+Route::get('/admin/pending-announcement', function () {
+    return view('admin.content-pending-announcement');
+})->name('admin-pending-announcement');
+
 Route::get('/admin/analytics', function () {
     return view('admin.statsanalytics');
 })->name('admin-statsanalytics');

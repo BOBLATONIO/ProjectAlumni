@@ -63,7 +63,7 @@
                 </svg>
                 <span class="mx-2 text-sm whitespace-nowrap sidebar-menu-text "> Manage Content</span>
             </a>
-            <a class="flex items-center pl-5 w-full py-2  text-gray-700 hover:bg-gray-200 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E] a-pages"
+            {{-- <a class="flex items-center pl-5 w-full py-2  text-gray-700 hover:bg-gray-200 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E] a-pages"
                 href="{{ route('admin-questionnaire') }}">
                 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 sidebar-menu-icon mr-1">
@@ -71,7 +71,7 @@
                   </svg>
                   
                 <span class="mx-2 text-sm whitespace-nowrap sidebar-menu-text ">Questionnaire</span>
-            </a>
+            </a> --}}
 
             <a class="flex items-center pl-5 w-full py-2  text-gray-700 hover:bg-gray-200 dark:text-[#E2E5E9] dark:hover:bg-[#3B3D3E] a-pages"
                 href="{{ route('admin-alumniaccount') }}">

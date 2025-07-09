@@ -32,7 +32,7 @@
         <div class="flex-1 h-[calc(100vh-4rem)] overflow-y-auto  bg-gray-100 dark:bg-[#1c1c1d]">
             <div class="p-4 py-0 text-gray-800 ">
                 <div class=" px-4">
-                    <x-admin-components.admin-header-mng-content pageTitle='{{ $pageTitle }}'/>
+                    <x-admin-components.admin-page-header pageTitle='{{ $pageTitle }}'/>
                 </div>
                 {{ $slot }}
             </div>
