@@ -47,7 +47,7 @@
     <script src="{{ asset('assets/js/admin-navbar.js') }}"></script>
     <script src="{{ asset('assets/js/admin-sidebar.js') }}"></script>
     <script src="{{ asset('assets/js/darkMode.js') }}"></script>
-    <script>
+    {{-- <script>
        $(document).ready(function () {
             $(".chartCanvas").each(function (index) {
                 let chartCanvas = this;
@@ -180,7 +180,7 @@
                 });
             });
         });
-    </script>
+    </script> --}}
     
     @stack('scripts')
 

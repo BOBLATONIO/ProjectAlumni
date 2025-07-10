@@ -92,6 +92,10 @@ Route::get('/admin/pending-announcement', function () {
     return view('admin.content-pending-announcement');
 })->name('admin-pending-announcement');
 
+Route::get('/admin/sched-del-announcement', function () {
+    return view('admin.content-scheduled-announcement');
+})->name('admin-sched-del-announcement');
+
 Route::get('/admin/analytics', function () {
     return view('admin.statsanalytics');
 })->name('admin-statsanalytics');

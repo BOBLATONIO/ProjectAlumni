@@ -2,12 +2,12 @@
 
     <div class=" w-full flex justify-center pr-[300px] gap-8">
         <div class="flex flex-col w-[670px] mx-auto items-center pt-4 px-10 overflow-y-auto h-[calc(100vh-117px)] ">
-            <x-admin-components.admin-announcement-header announcementHeader="Published Announcement" />
+            <x-admin-components.admin-announcement-header announcementHeader="Scheduled Deletion" />
 
             <!-- 2 -->
             <div>
-               
-                post here
+               post here
+
 
             </div>
 
@@ -27,9 +27,9 @@
                 </div>
                 <!-- deletion schedule container-->
                 <div class="flex flex-col gap-1">
-                    <a href="" class="h-20 flex text-xs items-center border-[#ED4A2E] border p-2 rounded-lg">
+                    <a href="" class="h-20 flex text-xs items-center border-gray-200 border p-2 rounded-lg">
                         <img alt="annoucement-image"
-                            class="w-16 h-16 object-cover object-center rounded-md flex-shrink-0 mr-3"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center rounded-md flex-shrink-0 mr-3"
                             src="{{ asset('assets/images/SampleAnnounImage.jpg') }}">
                         <div class="flex-grow">
                             <div class="text-gray-500 line-clamp-1 uppercase">JUan dela cruz</div>
@@ -54,7 +54,7 @@
             <div class="border-t-[1.5px] my-2 mt-3"></div>
             <div class="w-full">
                 <div class="flex justify-between text-gray-600 mb-2">
-                    <p class="text-md font-semibold ">Scheduled Deletion</p>
+                    <p class="text-md font-semibold ">Published Post</p>
                     <a href="" class="mr-1 text-sm text-blue-600 hover:underline">
                         See all
                     </a>
