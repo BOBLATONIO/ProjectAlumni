@@ -96,17 +96,18 @@ Route::get('/admin/sched-del-announcement', function () {
     return view('admin.content-scheduled-announcement');
 })->name('admin-sched-del-announcement');
 
-Route::get('/admin/analytics', function () {
-    return view('admin.statsanalytics');
-})->name('admin-statsanalytics');
 
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->name('admin-dashboard');
 
-Route::get('/admin/alumniaccount', function () {
-    return view('admin.alumniaccount');
-})->name('admin-alumniaccount');
+Route::get('/admin/manage-alumni', function () {
+    return view('admin.manage-alumni');
+})->name('admin-manage-alumni');
+
+Route::get('/admin/alumni-list', function () {
+    return view('admin.alumni-list');
+})->name('admin-alumni-list');
 
 Route::get('/admin/response', function () {
     return view('admin.response');

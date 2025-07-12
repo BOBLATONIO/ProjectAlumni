@@ -1,14 +1,5 @@
-<x-layout.admin-layout pageTitle="Manage Alumni Account">
-    <x-slot:headerTab>
-        <button
-            class="flex items-center gap-2 text-sm px-5 py-1.5 rounded-sm bg-gray-800 border border-gray-800 text-gray-200">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                stroke="currentColor" class="size-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-            </svg>
-            Import Alumni List
-        </button>
-    </x-slot:headerTab>
+<x-layout.admin-layout pageTitle="Manage Alumni">
+
 
     <div class="mx-1  px-4 mb-4 bg-gray-50 mt-3 border rounded-sm ">
         <div class="flex flex-col items-start justify-between py-3 ">
@@ -35,6 +26,9 @@
                                     d="M9 5l7 7-7 7" />
                             </svg>
                         </button>
+                    </div>
+                    <div class="ml-2">
+                        <div class="text-base"><span>39</span> Total Accounts</div>
                     </div>
 
 
@@ -143,23 +137,6 @@
                                         </svg>
                                     </div>
                                 </div>
-
-                                <div class="flex items-center">
-                                    <div class=" mr-3">Status: </div>
-                                    <div class="relative w-full">
-                                        <select
-                                            class="block appearance-none w-full text-gray-700 bg-gray-50 border-gray-300  border-b text-sm py-1 text-start focus:outline-none">
-                                            <option value="">All</option>
-                                            <option value="option1">Registered</option>
-                                            <option value="option2">Unregistered</option>
-                                        </select>
-                                        <svg class="w-2.5 h-2.5 absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="1.5" d="m1 1 4 4 4-4" />
-                                        </svg>
-                                    </div>
-                                </div>
                                 <div class="relative flex gap-2 w-full pt-2  text-center">
                                     <div
                                         class="block w-1/2  text-gray-700  bg-gray-50 border-gray-300 hover:bg-gray-100 border rounded-sm text-sm py-1 text-center focus:outline-none">
@@ -174,29 +151,10 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-wrap gap-4 mx-2 p-3 rounded-sm border bg-gray-50 border-gray-300 my-1">
-            <div class="flex-1 min-w-[100px] px-4 border-r border-gray-300 last:border-r-0">
-                <p class="text-gray-500 text-md">Total Alumni</p>
-                <p class="text-2xl font-bold">756</p>
 
-            </div>
-            <div class="flex-1 min-w-[100px] px-4 border-r border-gray-300 last:border-r-0">
-                <p class="text-gray-500 text-md">Registered Alumni</p>
-                <p class="text-2xl font-bold">756</p>
-
-            </div>
-            <div class="flex-1 min-w-[100px] px-4 border-r border-gray-300 last:border-r-0">
-                <p class="text-gray-500 text-md">Unregistered Alumni</p>
-                <p class="text-2xl font-bold">1,593</p> {{-- number with a thousands separator e.g 1,298 --}}
-                {{-- <p class="text-sm text-green-600">0.02% <span class="text-gray-400">(651,029)</span></p> --}}
-            </div>
-        </div>
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase font-semibold border-b d">
                 <tr>
-                    <td scope="col" class="px-2 py-3 max-w-[5px] truncate overflow-hidden whitespace-nowrap">
-                        <input type="checkbox" />
-                    </td>
                     <td scope="col" class="px-2 py-3  max-w-[50px] truncate overflow-hidden whitespace-nowrap">
                         Student ID</td>
                     <td scope="col" class="px-2 py-3 max-w-[100px] truncate overflow-hidden whitespace-nowrap ">First
@@ -210,25 +168,40 @@
                     <td scope="col" class="px-2 py-3 max-w-[50px] truncate overflow-hidden whitespace-nowrap ">
                         Batch Year
                     </td>
-                    <td scope="col" class="px-2 py-3 max-w-[50px] truncate overflow-hidden whitespace-nowrap ">Status
-                    </td>
                     <td scope="col" class="px-2 py-3 max-w-[35px] truncate overflow-hidden whitespace-nowrap ">Action
                     </td>
                 </tr>
             </thead>
             <tbody class="text-gray-800 font-light">
-                <x-admin-components.admin-acc-list studentID="20231178999" fName="Rhon Harvey Harvey Harvey Harvey Harvey"
-                    lName="Lacsina" program="BSEd English" batchYear="2025" status="Unregistered" />
-                <x-admin-components.admin-acc-list studentID="202311789" fName="Rhon Harvey" lName="Lacsina"
-                    program="BSIT" batchYear="2025" status="Unregistered" />
-                <x-admin-components.admin-acc-list studentID="202311789" fName="Rhon Harvey" lName="Lacsina"
-                    program="BSIT" batchYear="2025" status="Unregistered" />
-                <x-admin-components.admin-acc-list studentID="202311789" fName="Rhon Harvey" lName="Lacsina"
-                    program="BSIT" batchYear="2025" status="Unregistered" />
-                <x-admin-components.admin-acc-list studentID="202311789" fName="Rhon Harvey" lName="Lacsina"
-                    program="BSIT" batchYear="2025" status="Unregistered" />
-                <x-admin-components.admin-acc-list studentID="202311789" fName="Rhon Harvey" lName="Lacsina"
-                    program="BSIT" batchYear="2025" status="Unregistered" />
+
+                <tr class="border-b last:border-b-0 odd:bg-gray-100">
+                    <td class="px-2 py-2  max-w-[50px] truncate overflow-hidden whitespace-nowrap">20231178999</td>
+                    <td class="px-2 py-2 truncate max-w-[100px] overflow-hidden whitespace-nowrap uppercase"
+                        title="Edit this for long name purpose">Harvey</td>
+                    <td class="px-2 py-2 truncate max-w-[100px] overflow-hidden whitespace-nowrap uppercase"
+                        title="Edit this for long name purpose">Lacsina</td>
+                    <td class="px-2 py-2 max-w-[55px] truncate overflow-hidden whitespace-nowrap"
+                        title="Edit this for long program purpose">Bachelor of Science in Information Technology</td>
+                    <td class="px-2 py-2 max-w-[50px] truncate overflow-hidden whitespace-nowrap ">2021</td>
+                    <td class=" relative px-4 py-2 max-w-[35px]">
+                        <button
+                            class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
+                            type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                        </button>
+                        <div
+                            class="dropdown-menu hidden absolute right-7 z-[100] w-auto bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                            <form action="">
+                                <a href="#" class="block py-1 px-4 hover:bg-gray-100 ">Dismiss</a>
+                                <a href="#" class="block py-1 px-4 hover:bg-gray-100 ">Delete</a>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -276,7 +249,8 @@
                     </div>
                 </div>
                 <h2 class="text-xl font-semibold mb-2">Are you sure?</h2>
-                <p class="text-gray-600 mb-6">This will reset the alumni's account. Their password and settings will be cleared. This action cannot be undone.</p>
+                <p class="text-gray-600 mb-6">This will reset the alumni's account. Their password and settings will be
+                    cleared. This action cannot be undone.</p>
                 <div class="space-y-2">
                     <button
                         class="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-sm transition duration-150">

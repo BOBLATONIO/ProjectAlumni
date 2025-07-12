@@ -4,9 +4,9 @@
     <td class="px-2 py-2  max-w-[50px] truncate overflow-hidden whitespace-nowrap">{{ $studentID }}</td>
     <td class="px-2 py-2 truncate max-w-[100px] overflow-hidden whitespace-nowrap uppercase" title="{{ $fName }}">{{ $fName }}</td>
     <td class="px-2 py-2 truncate max-w-[100px] overflow-hidden whitespace-nowrap uppercase" title="{{ $lName }}">{{ $lName }}</td>
+    <td class="px-2 py-2 truncate max-w-[100px] overflow-hidden whitespace-nowrap uppercase" title="{{ $lName }}">{{ $lName }}</td>
     <td class="px-2 py-2 max-w-[55px] truncate overflow-hidden whitespace-nowrap" title="{{ $program }}">{{ $program }}</td>
     <td class="px-2 py-2 max-w-[50px] truncate overflow-hidden whitespace-nowrap ">{{ $batchYear }}</td>
-    <td class="px-2 py-2  max-w-[50px] truncate overflow-hidden whitespace-nowrap ">{{ $status }}</td>
     <td class=" relative px-4 py-2 max-w-[35px]">
         <button
             class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
